@@ -2,25 +2,124 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+      padding: 40px 20px;
     }
-    h1 { margin-bottom: 8px; }
-    p { color: #666; }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #f8fafc;
+      margin-bottom: 8px;
+    }
+    .bio {
+      font-size: 1.1rem;
+      color: #94a3b8;
+    }
+    .links {
+      margin-top: 16px;
+      display: flex;
+      gap: 12px;
+    }
+    .links a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .links a:hover { text-decoration: underline; }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 1.4rem;
+      color: #f1f5f9;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+      transition: transform 0.15s ease;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .card h3 {
+      font-size: 1.15rem;
+      color: #f8fafc;
+      margin-bottom: 6px;
+    }
+    .card p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: #334155;
+      color: #38bdf8;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
-  <h1>Olá, mundo! 👋</h1>
-  <p>Este é o começo do meu portfólio no GitHub Pages.</p>
+  <div class="container">
+    <header>
+      <h1>Gustavo Denardi França</h1>
+      <p class="bio">Estudante de Engenharia / Desenvolvedor focado em Sistemas de Potência e Eletrônica de Potência.</p>
+      <div class="links">
+        <a href="https://linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
+        <a href="mailto:gustavodfranca27@gmail.com">E-mail</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Projetos em Destaque</h2>
+
+      <div class="card">
+        <h3>Nome do Projeto 1</h3>
+        <p>Breve descrição do que o projeto faz, o problema que resolve e quais ferramentas foram usadas.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Automação</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Nome do Projeto 2</h3>
+        <p>Outro projeto interessante que você desenvolveu, seja de faculdade, estágio ou iniciativa própria.</p>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Hardware</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sobre mim</h2>
+      <p style="color: #94a3b8;">
+        Escreva aqui 2 ou 3 linhas sobre a sua trajetória, faculdade, tecnologias que você gosta de explorar e o que está estudando no momento.
+      </p>
+    </section>
+  </div>
 </body>
 </html>
