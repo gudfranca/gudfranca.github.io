@@ -947,6 +947,7 @@ a.tag:hover {
   .section__head {
     align-items: stretch;
   }
+} /* <--- ESTA É A CHAVE QUE FALTAVA! */
 
 
 /* 10. Seletor de idiomas (mesmo padrão do botão de tema) --- */
