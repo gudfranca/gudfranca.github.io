@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gustavo Denardi França | Engenharia Elétrica e Sistemas de Potência</title>
-  <meta name="description" content="Portfólio de Gustavo Denardi França, estudante de Engenharia Elétrica em duplo diploma UFSC e INP-ENSEEIHT, com foco em sistemas de potência e redes de energia.">
+  <title>Gustavo Denardi França | Electrical Engineering & Power Systems</title>
+  <meta name="description" content="Portfolio of Gustavo Denardi França, Double Degree Electrical Engineering student at UFSC and Toulouse INP-ENSEEIHT, focusing on power systems, power electronics, and energy grids.">
   <meta name="theme-color" content="#0c1624">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c1624'/%3E%3Cpath d='M3 16c4-10 7-10 10 0s6 10 10 0 3-6 6-4' fill='none' stroke='%23f5b941' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
 
@@ -12,45 +12,67 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Define o tema antes da primeira pintura (evita o "piscar"). Escuro é o padrão. -->
+  <!-- Define o tema e o idioma antes da primeira pintura. Inglês e tema escuro são o padrão. -->
   <script>
     (function () {
       var tema = 'dark';
-      try { tema = localStorage.getItem('tema') || 'dark'; } catch (e) {}
+      var idioma = 'en';
+      try {
+        tema = localStorage.getItem('tema') || 'dark';
+        var urlLang = new URLSearchParams(window.location.search).get('lang');
+        if (urlLang && ['en', 'fr', 'pt'].indexOf(urlLang.toLowerCase()) !== -1) {
+          idioma = urlLang.toLowerCase();
+          localStorage.setItem('idioma', idioma);
+        } else {
+          var salvo = localStorage.getItem('idioma');
+          if (salvo && ['en', 'fr', 'pt'].indexOf(salvo) !== -1) idioma = salvo;
+        }
+      } catch (e) {}
       document.documentElement.dataset.theme = tema === 'light' ? 'light' : 'dark';
+      document.documentElement.lang = idioma === 'pt' ? 'pt-BR' : idioma;
       document.documentElement.classList.add('js');
     })();
   </script>
 
   <link rel="stylesheet" href="style.css">
+  <script src="traducoes.js" defer></script>
+  <script src="projetos.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 
 <body id="topo">
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skipLink">Skip to content</a>
 
   <!-- Fundo com parallax. Troque a URL no style.css (.bg-parallax__img) por outra imagem do Unsplash -->
   <div class="bg-parallax" aria-hidden="true"><div class="bg-parallax__img"></div></div>
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="#topo" aria-label="Gustavo Denardi França, ir para o início">Gustavo Denardi França</a>
+      <a class="brand" href="#topo" aria-label="Gustavo Denardi França, go to top" data-i18n-aria="a11y.brandHome">Gustavo Denardi França</a>
 
-      <nav class="nav" aria-label="Principal">
-        <a href="#video">Apresentação</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+      <nav class="nav" aria-label="Main navigation" data-i18n-aria="a11y.navMain">
+        <a href="#video" data-i18n="nav.video">Presentation</a>
+        <a href="#projetos" data-i18n="nav.projects">Projects</a>
+        <a href="#contato" data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <button class="theme-toggle" id="tema" type="button" aria-label="Mudar para o tema claro">
-        <svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-        </svg>
-        <svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-        </svg>
-      </button>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Select language" data-i18n-aria="a11y.langSelector">
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="true" title="English">EN</button>
+          <button class="lang-btn" type="button" data-lang="fr" aria-pressed="false" title="Français">FR</button>
+          <button class="lang-btn" type="button" data-lang="pt" aria-pressed="false" title="Português">PT</button>
+        </div>
+
+        <button class="theme-toggle" id="tema" type="button" aria-label="Switch to light theme">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -62,19 +84,19 @@
         <div class="hero__text">
           <h1 class="hero__title reveal" id="titulo-hero">Gustavo<br>Denardi França</h1>
 
-          <p class="hero__role reveal" style="--d:.08s">
-            Estudante de Engenharia Elétrica, duplo diploma UFSC e INP-ENSEEIHT
+          <p class="hero__role reveal" style="--d:.08s" data-i18n="hero.role">
+            Electrical Engineering Student, Double Degree UFSC &amp; Toulouse INP-ENSEEIHT
           </p>
 
-          <!-- EDITE: sua bio -->
-          <p class="hero__bio reveal" style="--d:.16s">
-            Estudo Engenharia Elétrica com foco em sistemas de potência e redes de energia.
-            Uso Python, C/C++, MATLAB e Simulink para simular, medir e entender o
-            comportamento desses sistemas.
+          <!-- Para editar sua bio nos 3 idiomas, edite hero.bio no arquivo traducoes.js -->
+          <p class="hero__bio reveal" style="--d:.16s" data-i18n="hero.bio">
+            I study Electrical Engineering with a focus on power systems, energy conversion, and electrical grids.
+            I use Python, C/C++, MATLAB, and Simulink to model, simulate, measure, and analyze the
+            behavior of these systems.
           </p>
 
           <!-- Cada botão filtra a lista de projetos pela tecnologia -->
-          <ul class="chips reveal" style="--d:.24s" aria-label="Filtrar projetos por tecnologia">
+          <ul class="chips reveal" style="--d:.24s" aria-label="Filter projects by technology" data-i18n-aria="a11y.filterByTech">
             <li><button class="chip" type="button" data-filtro="Python" aria-pressed="false">Python</button></li>
             <li><button class="chip" type="button" data-filtro="C/C++" aria-pressed="false">C/C++</button></li>
             <li><button class="chip" type="button" data-filtro="MATLAB" aria-pressed="false">MATLAB</button></li>
@@ -82,8 +104,7 @@
           </ul>
 
           <div class="hero__links reveal" style="--d:.32s">
-            <a class="btn btn--primary" href="#projetos">Ver projetos</a>
-            <!-- EDITE: troque SEU-USUARIO pelos seus perfis -->
+            <a class="btn btn--primary" href="#projetos" data-i18n="hero.ctaProjects">View projects</a>
             <a class="btn" href="https://www.linkedin.com/in/gustavo-denardi-frança" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="btn" href="https://github.com/gudfranca" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
@@ -92,7 +113,7 @@
         <!-- Coloque sua foto em assets/img/foto-perfil.jpg (proporção 4:5). Sem a foto, aparecem as iniciais. -->
         <figure class="portrait placeholder reveal" style="--d:.2s">
           <span class="portrait__fallback" aria-hidden="true">GF</span>
-          <img src="assets/img/foto-perfil.jpg" alt="Foto de Gustavo Denardi França" width="640" height="800" onerror="this.remove()">
+          <img src="assets/img/foto-perfil.jpg" alt="Portrait of Gustavo Denardi França" data-i18n-alt="a11y.portraitAlt" width="640" height="800" onerror="this.remove()">
         </figure>
       </div>
 
@@ -100,7 +121,7 @@
       <div class="wave reveal" style="--d:.4s">
         <canvas id="onda" aria-hidden="true"></canvas>
       </div>
-      <p class="container wave__hint" aria-hidden="true">Mova o cursor ou toque na onda para perturbar a rede.</p>
+      <p class="container wave__hint" aria-hidden="true" data-i18n="hero.waveHint">Move the cursor or touch the wave to disturb the grid.</p>
     </section>
 
     <!-- Vídeo -->
@@ -108,21 +129,21 @@
       <div class="container">
         <div class="section__head reveal">
           <div>
-            <h2 class="section__title" id="titulo-video">Apresentação em vídeo</h2>
-            <!-- EDITE: texto de apoio -->
-            <p class="section__lead">Um resumo da minha trajetória e dos projetos em que estou trabalhando.</p>
+            <h2 class="section__title" id="titulo-video" data-i18n="videoSection.title">Video Presentation</h2>
+            <p class="section__lead" data-i18n="videoSection.lead">An overview of my academic background and the engineering projects I am working on.</p>
           </div>
         </div>
 
         <div class="video-frame reveal">
           <video controls preload="metadata" poster="assets/img/video-capa.jpg">
             <source src="assets/video/apresentacao.mp4" type="video/mp4">
-            Seu navegador não reproduz vídeo. <a href="assets/video/apresentacao.mp4">Baixe o arquivo</a>.
+            <span data-i18n="videoSection.fallback">Your browser does not support video playback.</span>
+            <a href="assets/video/apresentacao.mp4" data-i18n="videoSection.download">Download the video</a>.
           </video>
 
           <!-- Alternativa com YouTube: apague o <video> acima e use este iframe
           <iframe src="https://www.youtube-nocookie.com/embed/ID_DO_VIDEO"
-                  title="Apresentação de Gustavo Denardi França"
+                  title="Presentation by Gustavo Denardi França"
                   loading="lazy" allowfullscreen
                   allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
           -->
@@ -135,68 +156,65 @@
       <div class="container">
         <div class="section__head reveal">
           <div>
-            <h2 class="section__title" id="titulo-projetos">Projetos</h2>
-            <p class="section__lead">Simulação, medição e sistemas embarcados aplicados à engenharia elétrica.</p>
+            <h2 class="section__title" id="titulo-projetos" data-i18n="projectsSection.title">Projects</h2>
+            <p class="section__lead" data-i18n="projectsSection.lead">Simulation, synchrophasor measurement, and embedded systems applied to electrical engineering.</p>
           </div>
 
           <div class="search">
-            <label class="visually-hidden" for="busca">Buscar projetos por título ou tecnologia</label>
+            <label class="visually-hidden" for="busca" data-i18n="a11y.searchLabel">Search projects by title or technology</label>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
               <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
             </svg>
-            <input id="busca" type="search" placeholder="Buscar por título ou tecnologia" autocomplete="off" spellcheck="false">
+            <input id="busca" type="search" placeholder="Search by title or technology" data-i18n-placeholder="projectsSection.searchPlaceholder" autocomplete="off" spellcheck="false">
           </div>
         </div>
 
-        <p class="results" id="contagem" role="status">2 projetos</p>
+        <p class="results" id="contagem" role="status">2 projects</p>
 
+        <!-- A lista abaixo é atualizada automaticamente a partir do arquivo projetos.js -->
         <ul class="grid" id="projetos-lista" data-stagger>
-
-          <!-- Projeto 1 | EDITE texto, tags e imagem. O link aponta para o modelo; duplique-o para cada projeto -->
           <li class="reveal">
             <article class="card">
               <div class="card__media placeholder">
-                <img src="assets/img/projetos/esp32-capa.jpg" alt="Montagem do sistema de reflexos com ESP32" loading="lazy" onerror="this.remove()">
+                <img src="assets/img/projetos/esp32-capa.jpg" alt="Assembly of the reflex testing system with ESP32" loading="lazy" onerror="this.remove()">
               </div>
               <div class="card__body">
-                <h3 class="card__title">Sistema Interativo de Reflexos com ESP32</h3>
-                <p class="card__text">Jogo de reação em microcontrolador: o ESP32 sorteia um LED, mede o tempo até o botão ser pressionado e registra a pontuação.</p>
+                <h3 class="card__title">Interactive Reflex Testing System with ESP32</h3>
+                <p class="card__text">Microcontroller reaction system: the ESP32 randomly triggers an LED, measures the elapsed time until the button is pressed, and logs the score.</p>
                 <ul class="tags">
                   <li class="tag">ESP32</li>
                   <li class="tag">C/C++</li>
-                  <li class="tag">Embarcados</li>
-                  <li class="tag">Eletrônica</li>
+                  <li class="tag">Embedded Systems</li>
+                  <li class="tag">Electronics</li>
                 </ul>
-                <a class="card__link" href="projeto-modelo.html"><span>Ver detalhes</span><span class="visually-hidden"> do projeto Sistema Interativo de Reflexos com ESP32</span></a>
+                <a class="card__link" href="projeto-modelo.html?id=esp32"><span>View details</span><span class="visually-hidden"> of project Interactive Reflex Testing System with ESP32</span></a>
               </div>
             </article>
           </li>
 
-          <!-- Projeto 2 -->
           <li class="reveal">
             <article class="card">
               <div class="card__media placeholder">
-                <img src="assets/img/projetos/medfasee-capa.jpg" alt="Gráfico de oscilações em medições fasoriais do MedFasee" loading="lazy" onerror="this.remove()">
+                <img src="assets/img/projetos/medfasee-capa.jpg" alt="Chart of oscillations in phasor measurements from MedFasee" loading="lazy" onerror="this.remove()">
               </div>
               <div class="card__body">
-                <h3 class="card__title">Análise de Oscilações MedFasee</h3>
-                <p class="card__text">Processamento de medições fasoriais sincronizadas do sistema MedFasee para identificar e caracterizar oscilações de baixa frequência na rede.</p>
+                <h3 class="card__title">MedFasee Power System Oscillation Analysis</h3>
+                <p class="card__text">Processing of synchronized phasor measurements (PMU) from the MedFasee project to identify and characterize low-frequency electromechanical oscillations in the power grid.</p>
                 <ul class="tags">
                   <li class="tag">Python</li>
                   <li class="tag">MATLAB</li>
-                  <li class="tag">Sincrofasores</li>
-                  <li class="tag">Processamento de sinais</li>
+                  <li class="tag">Synchrophasors</li>
+                  <li class="tag">Signal Processing</li>
                 </ul>
-                <a class="card__link" href="projeto-modelo.html"><span>Ver detalhes</span><span class="visually-hidden"> do projeto Análise de Oscilações MedFasee</span></a>
+                <a class="card__link" href="projeto-modelo.html?id=medfasee"><span>View details</span><span class="visually-hidden"> of project MedFasee Power System Oscillation Analysis</span></a>
               </div>
             </article>
           </li>
-
         </ul>
 
         <div class="empty" id="vazio" hidden>
-          <p>Nenhum projeto encontrado para “<span id="termo-vazio"></span>”. Tente uma tecnologia, como Python ou MATLAB.</p>
-          <button class="btn" id="limpar-busca" type="button">Limpar busca</button>
+          <p><span data-i18n="projectsSection.emptyPrefix">No projects found for “</span><span id="termo-vazio"></span><span data-i18n="projectsSection.emptySuffix">”. Try a technology such as Python or MATLAB.</span></p>
+          <button class="btn" id="limpar-busca" type="button" data-i18n="projectsSection.clearSearch">Clear search</button>
         </div>
       </div>
     </section>
@@ -206,13 +224,12 @@
     <div class="container site-footer__inner">
       <div>
         <p class="site-footer__name">Gustavo Denardi França</p>
-        <p class="site-footer__small">© <span id="ano">2026</span> Todos os direitos reservados.</p>
+        <p class="site-footer__small">© <span id="ano">2026</span> <span data-i18n="footer.rights">All rights reserved.</span></p>
       </div>
-      <!-- EDITE: seus links e e-mail -->
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/gustavo-denardi-frança" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="https://github.com/gudfranca" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="mailto:gustavodfranca27@gmail.com">E-mail</a></li>
+        <li><a href="mailto:gustavodfranca27@gmail.com" data-i18n="footer.email">Email</a></li>
       </ul>
     </div>
   </footer>
