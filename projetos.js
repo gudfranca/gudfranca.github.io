@@ -15,7 +15,7 @@ window.PROJETOS = [
     },
     links: {
       github: "",
-      relatorio: "",
+      relatorio: "assets/relatorio-spider-sense.pdf",
       demo: ""
     },
     galeria: [
