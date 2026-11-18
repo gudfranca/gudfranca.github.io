@@ -17,7 +17,7 @@ window.PROJETOS = [
     },
     links: {
       github: "https://github.com/gudfranca",
-      relatorio: "http://www.peteel.ufsc.br/projetos",
+      relatorio: "assets/relatorio-spider-sense.pdf",
       demo: ""
     },
     galeria: [
