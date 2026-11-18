@@ -430,6 +430,20 @@
     }
 
     // Links externos do projeto (oculta a seção inteira se não houver links ativos)
+    // Botão centralizado do relatório (antes da galeria)
+    const relatorioCta = $('#proj-relatorio-cta');
+    const relatorioBtn = $('#proj-relatorio-btn');
+    const urlRelatorio = proj.links && proj.links.relatorio ? proj.links.relatorio.trim() : '';
+    if (relatorioCta && relatorioBtn) {
+      if (urlRelatorio && urlRelatorio !== '#') {
+        relatorioCta.hidden = false;
+        relatorioBtn.href = urlRelatorio;
+      } else {
+        relatorioCta.hidden = true;
+      }
+    }
+
+    // Links externos adicionais no final da página (oculta a seção se não houver outros links)
     const linksSecao = $('#proj-links-secao');
     const linksContainer = $('#proj-links');
     if (linksSecao && linksContainer) {
@@ -437,7 +451,6 @@
       const cfgLinks = proj.links || {};
       const botoes = [
         { url: cfgLinks.github, chaveTexto: 'projectPage.btnGithub', primario: true },
-        { url: cfgLinks.relatorio, chaveTexto: 'projectPage.btnReport', primario: false },
         { url: cfgLinks.demo, chaveTexto: 'projectPage.btnDemo', primario: false }
       ];
 
@@ -455,6 +468,7 @@
         }
       });
       linksSecao.hidden = !algumLink;
+    }
     }
   }
 
