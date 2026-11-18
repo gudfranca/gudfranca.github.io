@@ -62,17 +62,17 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-03.jpg",
+        src: "assets/img/projetos/esp32-03.jpeg",
         larga: false,
         alt: {
-          en: "3D slicing of the master module top cover with cutouts for the LCD display and reset button",
-          fr: "Tranchage 3D du couvercle supérieur du module maître avec découpes pour l'écran LCD et le bouton reset",
-          pt: "Modelagem e fatiamento 3D da tampa superior do módulo mestre com recortes para o display LCD e botão de reset"
+          en: "First wireless tests of Spider Sense showing the master module with LCD display alongside the yellow and red wireless button modules",
+          fr: "Premiers tests sans fil du Spider Sense montrant le module maître avec écran LCD aux côtés des modules de boutons jaune et rouge",
+          pt: "Primeiros testes wireless do Spider Sense mostrando o módulo mestre com display LCD ao lado dos módulos de botões amarelo e vermelho"
         },
         legenda: {
-          en: "3D modeling and slicing (Anycubic i3 Mega S / PLA, 32.66 g, 2h43m) of the top cover with cutouts for the LCD screen and start/reset button.",
-          fr: "Modélisation et tranchage 3D (Anycubic i3 Mega S / PLA, 32,66 g, 2h43m) du couvercle supérieur avec découpes pour l'écran LCD et le bouton.",
-          pt: "Modelagem e fatiamento 3D em filamento PLA (32,66 g, tempo estimado de 2h43min) da tampa superior com recortes para o display LCD e o botão de reset."
+          en: "First wireless tests: master module with integrated LCD display and illuminated start button communicating via ESP-NOW with the first two autonomous modules (yellow and red).",
+          fr: "Premiers tests sans fil : module maître avec écran LCD intégré et bouton lumineux communiquant via ESP-NOW avec les deux premiers modules autonomes (jaune et rouge).",
+          pt: "Primeiros testes wireless: módulo mestre com display LCD integrado e botão iluminado comunicando-se via ESP-NOW com os dois primeiros módulos autônomos (amarelo e vermelho)."
         }
       },
       {
