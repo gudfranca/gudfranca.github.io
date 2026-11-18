@@ -112,7 +112,6 @@
     projetosOrdenados.forEach((proj, idx) => {
       const t = (proj.textos && (proj.textos[idiomaAtual] || proj.textos.en)) || {};
       const tags = Array.isArray(t.tags) ? t.tags : [];
-      // Inclui termos de todos os idiomas no índice invisível de busca para que "ESP32", "Embarcados" ou "Embedded" funcionem sempre
       const todasTagsBusca = ['en', 'fr', 'pt']
         .map((l) => {
           const tl = proj.textos && proj.textos[l];
@@ -275,6 +274,19 @@
       }
     }
 
+    // Botão centralizado do relatório (antes da galeria)
+    const relatorioCta = $('#proj-relatorio-cta');
+    const relatorioBtn = $('#proj-relatorio-btn');
+    const urlRelatorio = proj.links && proj.links.relatorio ? proj.links.relatorio.trim() : '';
+    if (relatorioCta && relatorioBtn) {
+      if (urlRelatorio && urlRelatorio !== '#') {
+        relatorioCta.hidden = false;
+        relatorioBtn.href = urlRelatorio;
+      } else {
+        relatorioCta.hidden = true;
+      }
+    }
+
     // Galeria de imagens
     const galeriaSecao = $('#proj-galeria-secao');
     const galeriaEl = $('#proj-galeria');
@@ -348,7 +360,6 @@
           if (nodo && val) nodo.textContent = val;
         });
 
-        // Interatividade dos blocos do diagrama
         const infoTitulo = $('#dg-info-titulo');
         const infoTexto = $('#dg-info-texto');
         const detalhes = t.diagrama.detalhes || {};
@@ -429,20 +440,6 @@
       }
     }
 
-    // Links externos do projeto (oculta a seção inteira se não houver links ativos)
-    // Botão centralizado do relatório (antes da galeria)
-    const relatorioCta = $('#proj-relatorio-cta');
-    const relatorioBtn = $('#proj-relatorio-btn');
-    const urlRelatorio = proj.links && proj.links.relatorio ? proj.links.relatorio.trim() : '';
-    if (relatorioCta && relatorioBtn) {
-      if (urlRelatorio && urlRelatorio !== '#') {
-        relatorioCta.hidden = false;
-        relatorioBtn.href = urlRelatorio;
-      } else {
-        relatorioCta.hidden = true;
-      }
-    }
-
     // Links externos adicionais no final da página (oculta a seção se não houver outros links)
     const linksSecao = $('#proj-links-secao');
     const linksContainer = $('#proj-links');
@@ -468,7 +465,6 @@
         }
       });
       linksSecao.hidden = !algumLink;
-    }
     }
   }
 
