@@ -7,11 +7,11 @@ window.PROJETOS = [
     ordem: 1,
     destaque: true,
     categoria: "Embedded Systems & IoT",
-    imagemCapa: "assets/img/projetos/esp32-capa.jpg",
+    imagemCapa: "assets/img/projetos/esp32-capa.jpeg",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/esp32-capa.jpg"
+      poster: "assets/img/projetos/esp32-capa.jpeg"
     },
     links: {
       github: "",
@@ -20,7 +20,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/esp32-01.jpg",
+        src: "assets/img/projetos/esp32-011.jpeg",
         larga: true,
         alt: {
           en: "Final prototype of the Spider Sense wireless system with master unit and 5 interactive button modules",
@@ -34,7 +34,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-02.jpg",
+        src: "assets/img/projetos/esp32-02.jpeg",
         larga: false,
         alt: {
           en: "First wired prototype (MVP) of Spider Sense with 6 arcade buttons and LCD screen",
@@ -48,7 +48,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-03.jpg",
+        src: "assets/img/projetos/esp32-03.jpeg",
         larga: false,
         alt: {
           en: "Internal hardware assembly of a wireless module using ESP32 WROOM, battery power circuit, and arcade button",
