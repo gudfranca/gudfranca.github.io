@@ -1027,3 +1027,232 @@ a.tag:hover {
     font-size: 0.72rem;
   }
 }
+/* 11. Linha do Tempo (Jornada Acadêmica) ------------------- */
+.timeline__hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  align-items: start;
+}
+
+/* Linha horizontal contínua que conecta os pontos no computador */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 76px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: var(--line);
+  z-index: 0;
+  transition: var(--theme-t);
+}
+
+.timeline__item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.timeline__node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.timeline__logo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background-color: var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease), background-color 0.45s ease;
+}
+
+.timeline__fallback {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.timeline__logo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  background: var(--surface);
+}
+
+.timeline__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  background: var(--line);
+  transition: transform 0.35s var(--ease), background-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.timeline__card {
+  width: 100%;
+  padding: 1.15rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease), background-color 0.45s ease;
+}
+
+.timeline__date {
+  display: inline-block;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.timeline__org {
+  margin: 0.65rem 0 0.3rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.timeline__event {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* Detalhes ocultos por padrão e revelados ao passar o mouse */
+.timeline__details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 1px solid transparent;
+  transition: max-height 0.4s var(--ease), opacity 0.35s var(--ease),
+    margin-top 0.35s var(--ease), padding-top 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+}
+
+.timeline__full {
+  margin: 0 0 0.55rem;
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.timeline__period {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+/* Efeito ao passar o mouse ou focar: cresce e mostra os detalhes */
+.timeline__item:hover,
+.timeline__item:focus-within {
+  z-index: 10;
+}
+
+.timeline__item:hover .timeline__logo,
+.timeline__item:focus-within .timeline__logo {
+  transform: scale(1.18);
+  border-color: var(--accent);
+}
+
+.timeline__item:hover .timeline__dot,
+.timeline__item:focus-within .timeline__dot {
+  transform: scale(1.45);
+  background: var(--accent);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.timeline__item:hover .timeline__card,
+.timeline__item:focus-within .timeline__card {
+  transform: translateY(-6px) scale(1.06);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.timeline__item:hover .timeline__details,
+.timeline__item:focus-within .timeline__details {
+  max-height: 240px;
+  opacity: 1;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top-color: var(--line);
+}
+
+/* Adaptação para tablets e celulares (linha vertical à esquerda) */
+@media (max-width: 960px) {
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .timeline::before {
+    top: 24px;
+    bottom: 24px;
+    left: 32px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .timeline__item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.15rem;
+  }
+
+  .timeline__node {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .timeline__dot {
+    display: none;
+  }
+
+  .timeline__item:hover .timeline__card,
+  .timeline__item:focus-within .timeline__card {
+    transform: scale(1.02);
+  }
+}
