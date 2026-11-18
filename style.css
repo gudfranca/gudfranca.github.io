@@ -164,7 +164,7 @@ p {
 .bg-parallax__img {
   position: absolute;
   inset: -12% 0 0 0;
-  background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=60")
+  background: url("assets/img/fundo.jpg")
     center / cover no-repeat;
   opacity: var(--bg-img-opacity);
   filter: grayscale(1) contrast(1.05);
