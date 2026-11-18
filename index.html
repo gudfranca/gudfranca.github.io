@@ -51,10 +51,10 @@
       <a class="brand" href="#topo" aria-label="Gustavo Denardi França, go to top" data-i18n-aria="a11y.brandHome">Gustavo Denardi França</a>
 
       <nav class="nav" aria-label="Main navigation" data-i18n-aria="a11y.navMain">
-        <a href="#video" data-i18n="nav.video">Presentation</a>
-        <a href="#projetos" data-i18n="nav.projects">Projects</a>
-        <a href="#contato" data-i18n="nav.contact">Contact</a>
-      </nav>
+     <a href="#jornada" data-i18n="nav.timeline">Academic Journey</a>
+     <a href="#projetos" data-i18n="nav.projects">Projects</a>
+     <a href="#contato" data-i18n="nav.contact">Contact</a>
+   </nav>
 
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Select language" data-i18n-aria="a11y.langSelector">
@@ -124,33 +124,120 @@
       <p class="container wave__hint" aria-hidden="true" data-i18n="hero.waveHint">Move the cursor or touch the wave to disturb the grid.</p>
     </section>
 
-    <!-- Vídeo -->
-    <section class="section" id="video" aria-labelledby="titulo-video">
+    <!-- Jornada Acadêmica (Timeline) -->
+    <section class="section" id="jornada" aria-labelledby="titulo-jornada">
       <div class="container">
         <div class="section__head reveal">
           <div>
-            <h2 class="section__title" id="titulo-video" data-i18n="videoSection.title">Video Presentation</h2>
-            <p class="section__lead" data-i18n="videoSection.lead">An overview of my academic background and the engineering projects I am working on.</p>
+            <h2 class="section__title" id="titulo-jornada" data-i18n="timeline.title">Academic Journey</h2>
+            <p class="section__lead" data-i18n="timeline.lead">Key milestones of my academic and research trajectory in Electrical Engineering.</p>
           </div>
+          <p class="timeline__hint" data-i18n="timeline.hint">Hover or tap each milestone to see details</p>
         </div>
 
-        <div class="video-frame reveal">
-          <video controls preload="metadata" poster="assets/img/video-capa.jpg">
-            <source src="assets/video/apresentacao.mp4" type="video/mp4">
-            <span data-i18n="videoSection.fallback">Your browser does not support video playback.</span>
-            <a href="assets/video/apresentacao.mp4" data-i18n="videoSection.download">Download the video</a>.
-          </video>
+        <ol class="timeline reveal">
+          <!-- Ponto 1: UFSC (Ago 2023) -->
+          <li class="timeline__item" tabindex="0">
+            <div class="timeline__node">
+              <div class="timeline__logo placeholder">
+                <span class="timeline__fallback" aria-hidden="true">UFSC</span>
+                <img src="assets/img/logos/ufsc.png" alt="Logo UFSC" loading="lazy" onerror="this.remove()">
+              </div>
+              <span class="timeline__dot" aria-hidden="true"></span>
+            </div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="timeline.p1.date">AUG 2023</span>
+              <h3 class="timeline__org">UFSC</h3>
+              <p class="timeline__event" data-i18n="timeline.p1.event">Started B.Sc. in Electrical Engineering</p>
+              <div class="timeline__details">
+                <p class="timeline__full" data-i18n="timeline.p1.full">Universidade Federal de Santa Catarina — Bachelor of Electrical Engineering</p>
+                <span class="timeline__period" data-i18n="timeline.p1.period">2023 – Present</span>
+              </div>
+            </div>
+          </li>
 
-          <!-- Alternativa com YouTube: apague o <video> acima e use este iframe
-          <iframe src="https://www.youtube-nocookie.com/embed/ID_DO_VIDEO"
-                  title="Presentation by Gustavo Denardi França"
-                  loading="lazy" allowfullscreen
-                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          -->
-        </div>
+          <!-- Ponto 2: PET EEL (Abr 2024) -->
+          <li class="timeline__item" tabindex="0">
+            <div class="timeline__node">
+              <div class="timeline__logo placeholder">
+                <span class="timeline__fallback" aria-hidden="true">PET</span>
+                <img src="assets/img/logos/pet.png" alt="Logo PET EEL" loading="lazy" onerror="this.remove()">
+              </div>
+              <span class="timeline__dot" aria-hidden="true"></span>
+            </div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="timeline.p2.date">APR 2024</span>
+              <h3 class="timeline__org">PET EEL</h3>
+              <p class="timeline__event" data-i18n="timeline.p2.event">Selected for the PET EEL Program</p>
+              <div class="timeline__details">
+                <p class="timeline__full" data-i18n="timeline.p2.full">Tutorial Education Program in Electrical and Electronic Engineering (Programa de Educação Tutorial)</p>
+                <span class="timeline__period" data-i18n="timeline.p2.period">2024 – 2026</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- Ponto 3: LabPlan Voluntário (Mar 2025) -->
+          <li class="timeline__item" tabindex="0">
+            <div class="timeline__node">
+              <div class="timeline__logo placeholder">
+                <span class="timeline__fallback" aria-hidden="true">LP</span>
+                <img src="assets/img/logos/labplan.png" alt="Logo LabPlan" loading="lazy" onerror="this.remove()">
+              </div>
+              <span class="timeline__dot" aria-hidden="true"></span>
+            </div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="timeline.p3.date">MAR 2025</span>
+              <h3 class="timeline__org">LabPlan</h3>
+              <p class="timeline__event" data-i18n="timeline.p3.event">Joined as Volunteer Undergraduate Researcher</p>
+              <div class="timeline__details">
+                <p class="timeline__full" data-i18n="timeline.p3.full">Electric Energy Systems Planning Laboratory (Laboratório de Planejamento de Sistemas de Energia Elétrica)</p>
+                <span class="timeline__period" data-i18n="timeline.p3.period">2025 – 2026</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- Ponto 4: LabPlan Bolsista (Jan 2026) -->
+          <li class="timeline__item" tabindex="0">
+            <div class="timeline__node">
+              <div class="timeline__logo placeholder">
+                <span class="timeline__fallback" aria-hidden="true">LP</span>
+                <img src="assets/img/logos/labplan.png" alt="Logo LabPlan" loading="lazy" onerror="this.remove()">
+              </div>
+              <span class="timeline__dot" aria-hidden="true"></span>
+            </div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="timeline.p4.date">JAN 2026</span>
+              <h3 class="timeline__org">LabPlan</h3>
+              <p class="timeline__event" data-i18n="timeline.p4.event">Started Scholarship Research Project</p>
+              <div class="timeline__details">
+                <p class="timeline__full" data-i18n="timeline.p4.full">Electric Energy Systems Planning Laboratory — Synchrophasor &PMU Oscillation Analysis (MedFasee)</p>
+                <span class="timeline__period" data-i18n="timeline.p4.period">2025 – 2026</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- Ponto 5: ENSEEIHT (Set 2026) -->
+          <li class="timeline__item" tabindex="0">
+            <div class="timeline__node">
+              <div class="timeline__logo placeholder">
+                <span class="timeline__fallback" aria-hidden="true">N7</span>
+                <img src="assets/img/logos/enseeiht.png" alt="Logo ENSEEIHT" loading="lazy" onerror="this.remove()">
+              </div>
+              <span class="timeline__dot" aria-hidden="true"></span>
+            </div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="timeline.p5.date">SEP 2026</span>
+              <h3 class="timeline__org">ENSEEIHT</h3>
+              <p class="timeline__event" data-i18n="timeline.p5.event">Started Double Degree in France</p>
+              <div class="timeline__details">
+                <p class="timeline__full" data-i18n="timeline.p5.full">Toulouse INP - ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications)</p>
+                <span class="timeline__period" data-i18n="timeline.p5.period">2026 – Present</span>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
-
     <!-- Projetos -->
     <section class="section" id="projetos" aria-labelledby="titulo-projetos">
       <div class="container">
