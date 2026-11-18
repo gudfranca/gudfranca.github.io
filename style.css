@@ -1256,3 +1256,103 @@ a.tag:hover {
     transform: scale(1.02);
   }
 }
+
+/* 12. Diagrama Interativo e Animação de Sinais ------------- */
+.diagram svg {
+  min-width: 640px;
+}
+
+.diagram .d-bloco {
+  cursor: pointer;
+  outline: none;
+}
+
+.diagram .d-bloco rect {
+  transition: fill 0.3s var(--ease), stroke 0.3s var(--ease),
+    stroke-width 0.3s var(--ease), filter 0.3s var(--ease);
+}
+
+.diagram .d-led {
+  fill: var(--line);
+  transition: fill 0.3s var(--ease), filter 0.3s var(--ease);
+}
+
+.diagram .d-led--main,
+.diagram .d-bloco:hover .d-led,
+.diagram .d-bloco.is-active .d-led {
+  fill: var(--accent);
+  filter: drop-shadow(0 0 5px var(--accent));
+}
+
+.diagram .d-bloco:hover rect,
+.diagram .d-bloco.is-active rect {
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  fill: var(--surface);
+}
+
+.diagram .d-pulso {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 10 26;
+  opacity: 0.45;
+  pointer-events: none;
+  animation: pulsoRede 2.4s linear infinite;
+  transition: opacity 0.3s ease, stroke-width 0.3s ease;
+}
+
+.diagram .d-pulso.is-active {
+  opacity: 1;
+  stroke-width: 2.8;
+  animation-duration: 1.1s;
+}
+
+.diagram .d-linha.is-active {
+  stroke: var(--accent);
+}
+
+@keyframes pulsoRede {
+  to {
+    stroke-dashoffset: -72;
+  }
+}
+
+.diagram__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  margin-top: 1.1rem;
+  padding: 0.95rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  transition: var(--theme-t);
+}
+
+.diagram__badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.diagram__desc {
+  flex: 1 1 280px;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram .d-pulso {
+    animation: none;
+  }
+}
