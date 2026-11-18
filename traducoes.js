@@ -22,7 +22,7 @@ window.TRADUCOES = {
       searchLabel: "Search projects by title or technology"
     },
     nav: {
-      video: "Presentation",
+      timeline: "Academic Journey",
       projects: "Projects",
       contact: "Contact"
     },
@@ -32,11 +32,40 @@ window.TRADUCOES = {
       ctaProjects: "View projects",
       waveHint: "Move the cursor or touch the wave to disturb the grid."
     },
-    videoSection: {
-      title: "Video Presentation",
-      lead: "An overview of my academic background and the engineering projects I am working on.",
-      fallback: "Your browser does not support video playback.",
-      download: "Download the video"
+    timeline: {
+      title: "Academic Journey",
+      lead: "Key milestones of my academic and research trajectory in Electrical Engineering.",
+      hint: "Hover or tap each milestone to see details",
+      p1: {
+        date: "AUG 2023",
+        event: "Started B.Sc. in Electrical Engineering",
+        full: "Universidade Federal de Santa Catarina (UFSC) — Bachelor of Electrical Engineering",
+        period: "2023 – Present"
+      },
+      p2: {
+        date: "APR 2024",
+        event: "Selected for the PET EEL Program",
+        full: "Tutorial Education Program in Electrical and Electronic Engineering (Programa de Educação Tutorial das Engenharias Elétrica e Eletrônica)",
+        period: "2024 – 2026"
+      },
+      p3: {
+        date: "MAR 2025",
+        event: "Joined LabPlan as Volunteer Researcher",
+        full: "Electric Energy Systems Planning Laboratory (Laboratório de Planejamento de Sistemas de Energia Elétrica)",
+        period: "2025 – 2026"
+      },
+      p4: {
+        date: "JAN 2026",
+        event: "Started Scholarship Research Project at LabPlan",
+        full: "Electric Energy Systems Planning Laboratory (LabPlan) — Funded Research in Power System Oscillations",
+        period: "2025 – 2026"
+      },
+      p5: {
+        date: "SEP 2026",
+        event: "Started Double Degree in France",
+        full: "Toulouse INP - ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) — Master's in Electrical & Power Systems Engineering",
+        period: "2026 – Present"
+      }
     },
     projectsSection: {
       title: "Projects",
@@ -95,7 +124,7 @@ window.TRADUCOES = {
       searchLabel: "Rechercher des projets par titre ou technologie"
     },
     nav: {
-      video: "Présentation",
+      timeline: "Parcours",
       projects: "Projets",
       contact: "Contact"
     },
@@ -105,11 +134,40 @@ window.TRADUCOES = {
       ctaProjects: "Voir les projets",
       waveHint: "Déplacez le curseur ou touchez l'onde pour perturber le réseau."
     },
-    videoSection: {
-      title: "Présentation en vidéo",
-      lead: "Un aperçu de mon parcours académique et des projets d'ingénierie sur lesquels je travaille.",
-      fallback: "Votre navigateur ne prend pas en charge la lecture vidéo.",
-      download: "Télécharger le fichier"
+    timeline: {
+      title: "Parcours Académique",
+      lead: "Les étapes clés de ma formation d'ingénieur et de mes travaux de recherche en génie électrique.",
+      hint: "Survolez ou touchez chaque étape pour afficher les détails",
+      p1: {
+        date: "AOÛT 2023",
+        event: "Entrée à l'UFSC en Génie Électrique",
+        full: "Universidade Federal de Santa Catarina (UFSC) — Formation d'Ingénieur en Génie Électrique",
+        period: "2023 – Présent"
+      },
+      p2: {
+        date: "AVR 2024",
+        event: "Admis au programme sélectif PET EEL",
+        full: "Programme d'Éducation Tutorielle en Génie Électrique et Électronique (Programa de Educação Tutorial das Engenharias Elétrica e Eletrônica)",
+        period: "2024 – 2026"
+      },
+      p3: {
+        date: "MARS 2025",
+        event: "Chercheur volontaire au laboratoire LabPlan",
+        full: "Laboratoire de Planification des Systèmes d'Énergie Électrique (Laboratório de Planejamento de Sistemas de Energia Elétrica)",
+        period: "2025 – 2026"
+      },
+      p4: {
+        date: "JANV 2026",
+        event: "Début de projet de recherche boursier au LabPlan",
+        full: "Laboratoire de Planification des Systèmes d'Énergie Électrique (LabPlan) — Projet boursier sur les oscillations de réseaux électriques",
+        period: "2025 – 2026"
+      },
+      p5: {
+        date: "SEPT 2026",
+        event: "Début du double diplôme en France à l'ENSEEIHT",
+        full: "Toulouse INP - ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) — Énergie et Électronique de Puissance",
+        period: "2026 – Présent"
+      }
     },
     projectsSection: {
       title: "Projets",
@@ -168,7 +226,7 @@ window.TRADUCOES = {
       searchLabel: "Buscar projetos por título ou tecnologia"
     },
     nav: {
-      video: "Apresentação",
+      timeline: "Jornada",
       projects: "Projetos",
       contact: "Contato"
     },
@@ -178,11 +236,40 @@ window.TRADUCOES = {
       ctaProjects: "Ver projetos",
       waveHint: "Mova o cursor ou toque na onda para perturbar a rede."
     },
-    videoSection: {
-      title: "Apresentação em vídeo",
-      lead: "Um resumo da minha trajetória e dos projetos em que estou trabalhando.",
-      fallback: "Seu navegador não reproduz vídeo.",
-      download: "Baixe o arquivo"
+    timeline: {
+      title: "Jornada Acadêmica",
+      lead: "Principais marcos da minha trajetória acadêmica e de pesquisa em Engenharia Elétrica.",
+      hint: "Passe o cursor ou toque em cada ponto para ver os detalhes",
+      p1: {
+        date: "AGO 2023",
+        event: "Ingresso na UFSC em Engenharia Elétrica",
+        full: "Universidade Federal de Santa Catarina (UFSC) — Graduação em Engenharia Elétrica",
+        period: "2023 – Até o momento"
+      },
+      p2: {
+        date: "ABR 2024",
+        event: "Aprovado no processo seletivo do PET EEL",
+        full: "Programa de Educação Tutorial das Engenharias Elétrica e Eletrônica",
+        period: "2024 – 2026"
+      },
+      p3: {
+        date: "MAR 2025",
+        event: "Início como IC voluntário no LabPlan",
+        full: "Laboratório de Planejamento de Sistemas de Energia Elétrica — Iniciação Científica Voluntária",
+        period: "2025 – 2026"
+      },
+      p4: {
+        date: "JAN 2026",
+        event: "Início de projeto com bolsa no LabPlan",
+        full: "Laboratório de Planejamento de Sistemas de Energia Elétrica — Pesquisa com bolsa em Oscilações de Sistemas de Potência",
+        period: "2025 – 2026"
+      },
+      p5: {
+        date: "SET 2026",
+        event: "Início da dupla diplomação na França (ENSEEIHT)",
+        full: "Toulouse INP - ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) — Engenharia Elétrica e Sistemas de Energia",
+        period: "2026 – Até o momento"
+      }
     },
     projectsSection: {
       title: "Projetos",
