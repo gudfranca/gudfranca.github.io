@@ -1356,3 +1356,10 @@ a.tag:hover {
     animation: none;
   }
 }
+
+/* 13. Botão centralizado do relatório antes da galeria ----- */
+.project__report-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2rem, 5vw, 3.25rem);
+}
