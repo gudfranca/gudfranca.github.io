@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interactive Reflex Testing System with ESP32 | Gustavo Denardi França</title>
+  <title>Spider Sense | Gustavo Denardi França</title>
   <meta name="description" content="Microcontroller reaction system with ESP32 that measures user response time.">
   <meta name="theme-color" content="#0c1624">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c1624'/%3E%3Cpath d='M3 16c4-10 7-10 10 0s6 10 10 0 3-6 6-4' fill='none' stroke='%23f5b941' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -81,28 +81,20 @@
         <span data-i18n="projectPage.backHome">Back to Home</span>
       </a>
 
-      <!-- Cabeçalho do projeto (preenchido dinamicamente a partir de projetos.js) -->
       <header>
-        <h1 class="project__title reveal" id="proj-titulo">Interactive Reflex Testing System with ESP32</h1>
-        <p class="project__summary reveal" style="--d:.08s" id="proj-resumo">
-          Microcontroller reaction system: the ESP32 randomly triggers an LED, measures the elapsed time until the button is pressed, and logs the score.
-        </p>
-        <ul class="tags reveal" style="--d:.16s" id="proj-tags">
-          <li><a class="tag" href="index.html?busca=ESP32#projetos">ESP32</a></li>
-          <li><a class="tag" href="index.html?busca=C%2FC%2B%2B#projetos">C/C++</a></li>
-          <li><a class="tag" href="index.html?busca=Embedded#projetos">Embedded Systems</a></li>
-          <li><a class="tag" href="index.html?busca=Electronics#projetos">Electronics</a></li>
-        </ul>
+        <h1 class="project__title reveal" id="proj-titulo">Spider Sense</h1>
+        <p class="project__summary reveal" style="--d:.08s" id="proj-resumo"></p>
+        <ul class="tags reveal" style="--d:.16s" id="proj-tags"></ul>
       </header>
 
       <dl class="meta reveal">
-        <div><dt data-i18n="projectPage.metaRole">Role</dt><dd id="proj-funcao">Hardware &amp; firmware design</dd></div>
-        <div><dt data-i18n="projectPage.metaPeriod">Period</dt><dd id="proj-periodo">2024</dd></div>
-        <div><dt data-i18n="projectPage.metaTools">Tools</dt><dd id="proj-ferramentas">C/C++, ESP32, breadboard</dd></div>
-        <div><dt data-i18n="projectPage.metaContext">Context</dt><dd id="proj-contexto">Academic / Research project (PET EEL - UFSC)</dd></div>
+        <div><dt data-i18n="projectPage.metaRole">Role</dt><dd id="proj-funcao"></dd></div>
+        <div><dt data-i18n="projectPage.metaPeriod">Period</dt><dd id="proj-periodo"></dd></div>
+        <div><dt data-i18n="projectPage.metaTools">Tools</dt><dd id="proj-ferramentas"></dd></div>
+        <div><dt data-i18n="projectPage.metaContext">Context</dt><dd id="proj-contexto"></dd></div>
       </dl>
 
-      <!-- Vídeo de demonstração (aparece automaticamente se o projeto tiver video.url em projetos.js) -->
+      <!-- Vídeo de demonstração (opcional) -->
       <section class="block" id="proj-video-secao" aria-labelledby="titulo-proj-video" hidden>
         <h2 class="block__title reveal" id="titulo-proj-video" data-i18n="projectPage.videoTitle">Demonstration Video</h2>
         <div class="video-frame reveal" id="proj-video-container"></div>
@@ -120,49 +112,72 @@
         <div class="prose reveal" id="proj-prose"></div>
       </section>
 
-      <!-- Diagrama e resultados -->
+      <!-- Diagrama Interativo e Resultados -->
       <section class="block" id="proj-resultados-secao" aria-labelledby="titulo-resultados">
         <h2 class="block__title reveal" id="titulo-resultados" data-i18n="projectPage.resultsTitle">Diagram &amp; Results</h2>
 
         <figure class="diagram reveal" id="proj-diagrama">
           <div class="diagram__frame">
-            <svg viewBox="0 0 720 230" role="img" aria-labelledby="dg-titulo dg-desc">
-              <title id="dg-titulo">Block diagram of the reflex testing system</title>
-              <desc id="dg-desc">Push buttons send input signals to the ESP32, which drives the LEDs and outputs the scoreboard.</desc>
+            <svg viewBox="0 0 820 260" role="img" aria-labelledby="dg-titulo dg-desc">
+              <title id="dg-titulo">Interactive system block diagram</title>
+              <desc id="dg-desc">Hover or click on each module to inspect the technical signal flow.</desc>
               <defs>
                 <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                   <path d="M0 0L10 5L0 10z" class="d-seta"/>
                 </marker>
+                <marker id="seta-ativa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0 0L10 5L0 10z" class="d-seta-ativa"/>
+                </marker>
               </defs>
 
-              <g class="d-bloco">
-                <rect x="20" y="28" width="170" height="64" rx="12"/>
-                <text x="105" y="57" text-anchor="middle" id="dg-b1-t">Buttons</text>
-                <text x="105" y="77" text-anchor="middle" class="d-sub" id="dg-b1-s">interrupt inputs</text>
+              <!-- Trilhas base e feixes de pulso animado -->
+              <path class="d-linha" data-link="b1" d="M235 68 C 275 68, 275 118, 305 118" marker-end="url(#seta)"/>
+              <path class="d-pulso" data-link="b1" d="M235 68 C 275 68, 275 118, 305 118"/>
+
+              <path class="d-linha" data-link="b2" d="M305 142 C 275 142, 275 192, 235 192" marker-end="url(#seta)"/>
+              <path class="d-pulso" data-link="b2" d="M305 142 C 275 142, 275 192, 235 192"/>
+
+              <path class="d-linha" data-link="bs" d="M515 130 L585 130" marker-end="url(#seta)"/>
+              <path class="d-pulso" data-link="bs" d="M515 130 L585 130"/>
+
+              <!-- Bloco 1 (Superior Esquerdo) -->
+              <g class="d-bloco" data-node="b1" tabindex="0" role="button">
+                <rect x="25" y="30" width="210" height="76" rx="16"/>
+                <circle class="d-led" cx="46" cy="52" r="4"/>
+                <text x="130" y="62" text-anchor="middle" id="dg-b1-t">Start / Reset &amp; LCD</text>
+                <text x="130" y="84" text-anchor="middle" class="d-sub" id="dg-b1-s">user interface &amp; display</text>
               </g>
 
-              <g class="d-bloco">
-                <rect x="20" y="138" width="170" height="64" rx="12"/>
-                <text x="105" y="167" text-anchor="middle" id="dg-b2-t">LEDs</text>
-                <text x="105" y="187" text-anchor="middle" class="d-sub" id="dg-b2-s">digital outputs</text>
+              <!-- Bloco 2 (Inferior Esquerdo) -->
+              <g class="d-bloco" data-node="b2" tabindex="0" role="button">
+                <rect x="25" y="154" width="210" height="76" rx="16"/>
+                <circle class="d-led" cx="46" cy="176" r="4"/>
+                <text x="130" y="186" text-anchor="middle" id="dg-b2-t">5 Wireless Nodes</text>
+                <text x="130" y="208" text-anchor="middle" class="d-sub" id="dg-b2-s">ESP32 + LED + Button</text>
               </g>
 
-              <g class="d-bloco d-bloco--main">
-                <rect x="275" y="83" width="170" height="64" rx="12"/>
-                <text x="360" y="112" text-anchor="middle" id="dg-bc-t">ESP32</text>
-                <text x="360" y="132" text-anchor="middle" class="d-sub" id="dg-bc-s">logic &amp; hardware timer</text>
+              <!-- Bloco Central (Mestre) -->
+              <g class="d-bloco d-bloco--main" data-node="bc" tabindex="0" role="button">
+                <rect x="305" y="92" width="210" height="76" rx="16"/>
+                <circle class="d-led d-led--main" cx="326" cy="114" r="4"/>
+                <text x="410" y="124" text-anchor="middle" id="dg-bc-t">Master ESP32</text>
+                <text x="410" y="146" text-anchor="middle" class="d-sub" id="dg-bc-s">ESP-NOW 2.4 GHz</text>
               </g>
 
-              <g class="d-bloco">
-                <rect x="530" y="83" width="170" height="64" rx="12"/>
-                <text x="615" y="112" text-anchor="middle" id="dg-bs-t">Scoreboard</text>
-                <text x="615" y="132" text-anchor="middle" class="d-sub" id="dg-bs-s">serial or Wi-Fi</text>
+              <!-- Bloco Saída (Direita) -->
+              <g class="d-bloco" data-node="bs" tabindex="0" role="button">
+                <rect x="585" y="92" width="210" height="76" rx="16"/>
+                <circle class="d-led" cx="606" cy="114" r="4"/>
+                <text x="690" y="124" text-anchor="middle" id="dg-bs-t">Score &amp; Tier</text>
+                <text x="690" y="146" text-anchor="middle" class="d-sub" id="dg-bs-s">Gold / Silver / Bronze</text>
               </g>
-
-              <path class="d-linha" d="M190 60 C 235 60, 235 105, 275 105" marker-end="url(#seta)"/>
-              <path class="d-linha" d="M275 125 C 235 125, 235 170, 190 170" marker-end="url(#seta)"/>
-              <path class="d-linha" d="M445 115 L530 115" marker-end="url(#seta)"/>
             </svg>
+
+            <!-- Painel interativo que muda ao passar o mouse nos blocos -->
+            <div class="diagram__info" id="dg-info-box" aria-live="polite">
+              <span class="diagram__badge" id="dg-info-titulo">Interactive Architecture</span>
+              <p class="diagram__desc" id="dg-info-texto">Hover or tap any block above to inspect its hardware role and signal flow.</p>
+            </div>
           </div>
           <figcaption id="dg-legenda">System block diagram.</figcaption>
         </figure>
@@ -181,8 +196,14 @@
         </div>
       </section>
 
-      <!-- Links -->
-      <section class="block" id="proj-links-secao" aria-labelledby="titulo-links">
+      <!-- Conclusão -->
+      <section class="block" id="proj-conclusao-secao" aria-labelledby="titulo-conclusao">
+        <h2 class="block__title reveal" id="titulo-conclusao" data-i18n="projectPage.conclusionTitle">Conclusion</h2>
+        <div class="prose reveal" id="proj-conclusao"></div>
+      </section>
+
+      <!-- Links (só aparece se houver link de relatório ou demo) -->
+      <section class="block" id="proj-links-secao" aria-labelledby="titulo-links" hidden>
         <h2 class="block__title reveal" id="titulo-links" data-i18n="projectPage.linksTitle">Links &amp; Resources</h2>
         <div class="project__links reveal" id="proj-links"></div>
       </section>
