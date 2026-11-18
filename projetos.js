@@ -34,7 +34,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-02.jpeg",
+        src: "assets/img/projetos/esp32-01.jpeg",
         larga: false,
         alt: {
           en: "First wired prototype (MVP) of Spider Sense with 6 arcade buttons and LCD screen",
@@ -48,21 +48,21 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-03.jpeg",
+        src: "assets/img/projetos/esp32-02.jpeg",
         larga: false,
         alt: {
-          en: "Internal hardware assembly of a wireless module using ESP32 WROOM, battery power circuit, and arcade button",
-          fr: "Montage matériel interne d'un module sans fil avec ESP32 WROOM, circuit d'alimentation par batterie et bouton",
-          pt: "Montagem de hardware de um módulo utilizando ESP32 WROOM, circuito de alimentação a bateria e botão arcade"
+          en: "First wireless tests of Spider Sense showing the master module with LCD display alongside the yellow and red wireless button modules",
+          fr: "Premiers tests sans fil du Spider Sense montrant le module maître avec écran LCD aux côtés des modules de boutons jaune et rouge",
+          pt: "Primeiros testes wireless do Spider Sense mostrando o módulo mestre com display LCD ao lado dos módulos de botões amarelo e vermelho"
         },
         legenda: {
-          en: "Standalone module hardware: 30-pin ESP32 WROOM, battery power supply and regulator, power switch, and illuminated button.",
-          fr: "Matériel d'un module autonome : ESP32 WROOM 30 broches, alimentation par batterie, interrupteur et bouton lumineux.",
-          pt: "Hardware do módulo autônomo: ESP32 WROOM de 30 pinos, circuito de alimentação por bateria, chave liga/desliga e botão iluminado."
+          en: "First wireless tests: master module with integrated LCD display and illuminated start button communicating via ESP-NOW with the first two autonomous modules (yellow and red).",
+          fr: "Premiers tests sans fil : module maître avec écran LCD intégré et bouton lumineux communiquant via ESP-NOW avec les deux premiers modules autonomes (jaune et rouge).",
+          pt: "Primeiros testes wireless: módulo mestre com display LCD integrado e botão iluminado comunicando-se via ESP-NOW com os dois primeiros módulos autônomos (amarelo e vermelho)."
         }
       },
       {
-        src: "assets/img/projetos/esp32-04.jpg",
+        src: "assets/img/projetos/esp32-03.jpg",
         larga: false,
         alt: {
           en: "3D slicing of the master module top cover with cutouts for the LCD display and reset button",
@@ -76,17 +76,17 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-05.jpg",
+        src: "assets/img/projetos/esp32-04.jpg",
         larga: false,
         alt: {
-          en: "3D slicing of the cylindrical base enclosure that houses the internal electronics and battery",
-          fr: "Tranchage 3D de la base cylindrique abritant l'électronique interne et la batterie",
-          pt: "Modelagem e fatiamento 3D da base cilíndrica das carcaças para abrigar o hardware e a bateria"
+          en: "3D slicing of the master module top cover with cutouts for the LCD display and reset button",
+          fr: "Tranchage 3D du couvercle supérieur du module maître avec découpes pour l'écran LCD et le bouton reset",
+          pt: "Modelagem e fatiamento 3D da tampa superior do módulo mestre com recortes para o display LCD e botão de reset"
         },
         legenda: {
-          en: "3D modeling and slicing (Anycubic i3 Mega S / PLA, 53.12 g, 5h12m) of the ergonomic cylindrical base designed to house the ESP32 and battery circuit.",
-          fr: "Modélisation et tranchage 3D (Anycubic i3 Mega S / PLA, 53,12 g, 5h12m) de la base cylindrique ergonomique abritant l'ESP32 et la batterie.",
-          pt: "Modelagem e fatiamento 3D em filamento PLA (53,12 g, tempo estimado de 5h12min) da base cilíndrica ergonômica projetada para abrigar o circuito e a bateria."
+          en: "3D modeling and slicing of the top cover with cutouts for the LCD screen and start/reset button.",
+          fr: "Modélisation et tranchage 3D du couvercle supérieur avec découpes pour l'écran LCD et le bouton.",
+          pt: "Modelagem e fatiamento 3D em filamento PLA da tampa superior com recortes para o display LCD e o botão de reset."
         }
       }
     ],
