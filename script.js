@@ -325,7 +325,7 @@
       });
     }
 
-    // Diagrama SVG e Tabela de Resultados
+    // Diagrama SVG Interativo e Tabela de Resultados
     const diagEl = $('#proj-diagrama');
     if (diagEl) {
       if (t.diagrama && t.diagrama.mostrar) {
@@ -347,6 +347,44 @@
           const nodo = $(sel);
           if (nodo && val) nodo.textContent = val;
         });
+
+        // Interatividade dos blocos do diagrama
+        const infoTitulo = $('#dg-info-titulo');
+        const infoTexto = $('#dg-info-texto');
+        const detalhes = t.diagrama.detalhes || {};
+        const titulosBlocos = {
+          b1: t.diagrama.bloco1Titulo,
+          b2: t.diagrama.bloco2Titulo,
+          bc: t.diagrama.blocoCentralTitulo,
+          bs: t.diagrama.blocoSaidaTitulo
+        };
+
+        const resetarInfo = () => {
+          $$('.d-bloco', diagEl).forEach((b) => b.classList.remove('is-active'));
+          $$('.d-linha, .d-pulso', diagEl).forEach((l) => l.classList.remove('is-active'));
+          if (infoTitulo) infoTitulo.textContent = t.diagrama.blocoCentralTitulo || 'Architecture';
+          if (infoTexto) infoTexto.textContent = t.diagrama.dicaPadrao || '';
+        };
+
+        resetarInfo();
+
+        $$('.d-bloco', diagEl).forEach((bloco) => {
+          const chave = bloco.dataset.node;
+          const ativar = () => {
+            $$('.d-bloco', diagEl).forEach((b) => b.classList.toggle('is-active', b === bloco));
+            $$('.d-linha, .d-pulso', diagEl).forEach((l) => {
+              const ativo = chave === 'bc' || l.dataset.link === chave;
+              l.classList.toggle('is-active', ativo);
+            });
+            if (infoTitulo) infoTitulo.textContent = titulosBlocos[chave] || '';
+            if (infoTexto && detalhes[chave]) infoTexto.textContent = detalhes[chave];
+          };
+          bloco.onmouseenter = ativar;
+          bloco.onfocus = ativar;
+          bloco.onclick = ativar;
+        });
+
+        diagEl.onmouseleave = resetarInfo;
       } else {
         diagEl.hidden = true;
       }
@@ -373,7 +411,25 @@
       }
     }
 
-    // Links externos do projeto
+    // Conclusão do projeto
+    const conclusaoSecao = $('#proj-conclusao-secao');
+    const conclusaoEl = $('#proj-conclusao');
+    if (conclusaoSecao && conclusaoEl) {
+      const paragrafosConclusao = Array.isArray(t.conclusao) ? t.conclusao : [];
+      if (paragrafosConclusao.length > 0) {
+        conclusaoSecao.hidden = false;
+        conclusaoEl.innerHTML = '';
+        paragrafosConclusao.forEach((paragrafo) => {
+          const p = document.createElement('p');
+          p.textContent = paragrafo;
+          conclusaoEl.appendChild(p);
+        });
+      } else {
+        conclusaoSecao.hidden = true;
+      }
+    }
+
+    // Links externos do projeto (oculta a seção inteira se não houver links ativos)
     const linksSecao = $('#proj-links-secao');
     const linksContainer = $('#proj-links');
     if (linksSecao && linksContainer) {
