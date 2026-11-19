@@ -240,11 +240,11 @@ window.PROJETOS = [
     ordem: 2,
     destaque: true,
     categoria: "Power Systems & Synchrophasors",
-    imagemCapa: "assets/img/projetos/medfasee-capa.jpg",
+    imagemCapa: "assets/img/projetos/medfasee-capa",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/medfasee-capa.jpg"
+      poster: "assets/img/projetos/medfasee-capa"
     },
     links: {
       github: "",
@@ -253,7 +253,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/medfasee-01.jpg",
+        src: "assets/img/projetos/medfasee-01",
         larga: true,
         alt: {
           en: "Map of the Brazilian National Interconnected System (SIN) monitored via synchronized phasor measurement units",
@@ -267,7 +267,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-02.jpg",
+        src: "assets/img/projetos/medfasee-02.png",
         larga: false,
         alt: {
           en: "High-resolution PMU frequency event plot generated in MedPlot evaluating ONS operational thresholds",
@@ -281,7 +281,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-03.jpg",
+        src: "assets/img/projetos/medfasee-03.png",
         larga: false,
         alt: {
           en: "Multiband power spectral density (PSD) segmentation across four frequency bands for oscillation analysis",
@@ -295,7 +295,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-04.jpg",
+        src: "assets/img/projetos/medfasee-04.png",
         larga: false,
         alt: {
           en: "Oscillation detection severity evaluation across frequency bands using real-world PMU measurements",
