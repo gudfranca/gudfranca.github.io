@@ -1,5 +1,5 @@
 /* =========================================================
-   projetos.js | Base de Dados de Projetos (EN, FR, PT)
+   projetos.js | Base de Dados de Projetos e Experiências (EN, FR, PT)
    ========================================================= */
 window.PROJETOS = [
   {
@@ -7,11 +7,11 @@ window.PROJETOS = [
     ordem: 1,
     destaque: true,
     categoria: "Embedded Systems & IoT",
-    imagemCapa: "assets/img/projetos/esp32-capa.jpeg",
+    imagemCapa: "assets/img/projetos/esp32-capa.jpg",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/esp32-capa.jpeg"
+      poster: "assets/img/projetos/esp32-capa.jpg"
     },
     links: {
       github: "",
@@ -20,7 +20,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/esp32-01.jpeg",
+        src: "assets/img/projetos/esp32-01.jpg",
         larga: true,
         alt: {
           en: "Final prototype of the Spider Sense wireless system with master unit and 5 interactive button modules",
@@ -34,7 +34,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-02.jpeg",
+        src: "assets/img/projetos/esp32-02.jpg",
         larga: false,
         alt: {
           en: "First wired prototype (MVP) of Spider Sense with 6 arcade buttons and LCD screen",
@@ -48,7 +48,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-03.jpeg",
+        src: "assets/img/projetos/esp32-03.jpg",
         larga: false,
         alt: {
           en: "First wireless tests of Spider Sense showing the master module with LCD display alongside the yellow and red wireless button modules",
@@ -240,11 +240,11 @@ window.PROJETOS = [
     ordem: 2,
     destaque: true,
     categoria: "Power Systems & Synchrophasors",
-    imagemCapa: "assets/img/projetos/medfasee-capa",
+    imagemCapa: "assets/img/projetos/medfasee-capa.jpg",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/medfasee-capa"
+      poster: "assets/img/projetos/medfasee-capa.jpg"
     },
     links: {
       github: "",
@@ -253,7 +253,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/medfasee-01",
+        src: "assets/img/projetos/medfasee-01.jpg",
         larga: true,
         alt: {
           en: "Map of the Brazilian National Interconnected System (SIN) monitored via synchronized phasor measurement units",
@@ -267,7 +267,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-02.png",
+        src: "assets/img/projetos/medfasee-02.jpg",
         larga: false,
         alt: {
           en: "High-resolution PMU frequency event plot generated in MedPlot evaluating ONS operational thresholds",
@@ -281,7 +281,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-03.png",
+        src: "assets/img/projetos/medfasee-03.jpg",
         larga: false,
         alt: {
           en: "Multiband power spectral density (PSD) segmentation across four frequency bands for oscillation analysis",
@@ -295,7 +295,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-04.png",
+        src: "assets/img/projetos/medfasee-04.jpg",
         larga: false,
         alt: {
           en: "Oscillation detection severity evaluation across frequency bands using real-world PMU measurements",
@@ -459,6 +459,161 @@ window.PROJETOS = [
           "A atuação integrada nos projetos MedFasee e OpenWAMS no LabPlan proporcionou contato direto com medições fasoriais reais do Sistema Interligado Nacional (SIN) e com os requisitos normativos e operacionais do ONS.",
           "A experiência na verificação de indicadores de Qualidade da Energia Elétrica consolidou a base prática em monitoramento por PMUs, enquanto a pesquisa e os testes de detecção multibanda de oscilações (energia RMS e abordagem espectral OPI) evidenciaram a importância do processamento de sinais para a supervisão dinâmica e a estabilidade dos sistemas de potência."
         ]
+      }
+    }
+  },
+
+  {
+    id: "pet-eel",
+    ordem: 3,
+    destaque: false,
+    categoria: "Academic Excellence & Leadership",
+    imagemCapa: "assets/img/projetos/pet-capa.jpg",
+    video: {
+      url: "",
+      tipo: "youtube",
+      poster: ""
+    },
+    links: {
+      github: "",
+      relatorio: "",
+      site: "https://peteel.ufsc.br/",
+      demo: ""
+    },
+    galeria: [
+      {
+        src: "assets/img/projetos/pet-01.jpg",
+        larga: true,
+        alt: {
+          en: "PET EEL UFSC members group photo from the 2024.1 semester",
+          fr: "Photo de groupe des membres du PET EEL UFSC au semestre 2024.1",
+          pt: "Foto oficial do grupo PET EEL UFSC no semestre 2024.1"
+        },
+        legenda: {
+          en: "PET EEL group in 2024.1 — academic excellence group at UFSC built on teamwork, teaching, research, and extension.",
+          fr: "Le groupe PET EEL en 2024.1 — groupe d'excellence académique de l'UFSC fondé sur le travail d'équipe, l'enseignement, la recherche et la vulgarisation.",
+          pt: "Grupo PET EEL em 2024.1 — grupo de excelência acadêmica da UFSC pautado em trabalho em equipe, ensino, pesquisa e extensão."
+        }
+      },
+      {
+        src: "assets/img/projetos/pet-02.jpg",
+        larga: false,
+        alt: {
+          en: "Gustavo Denardi França wearing the official PET EEL polo shirt",
+          fr: "Gustavo Denardi França portant le polo officiel du PET EEL",
+          pt: "Gustavo Denardi França vestindo a polo oficial do PET EEL"
+        },
+        legenda: {
+          en: "Representing PET EEL during my tenure as a member, Management Coordinator, and event organizer.",
+          fr: "Représentation du PET EEL au cours de mon parcours en tant que membre, coordinateur de gestion et organisateur d'événements.",
+          pt: "Representando o PET EEL durante minha trajetória como membro, Coordenador de Gestão e organizador de eventos."
+        }
+      },
+      {
+        src: "assets/img/projetos/pet-03.jpg",
+        larga: false,
+        alt: {
+          en: "Volta ao Mundo do Conhecimento (VMC 2025) technical study trip organized by PET EEL",
+          fr: "Voyage technique Volta ao Mundo do Conhecimento (VMC 2025) organisé par le PET EEL",
+          pt: "Viagem técnica Volta ao Mundo do Conhecimento (VMC 2025) organizada pelo PET EEL"
+        },
+        legenda: {
+          en: "VMC 2025 (Volta ao Mundo do Conhecimento): the largest technical study trip of UFSC's Technological Center (CTC).",
+          fr: "VMC 2025 (Volta ao Mundo do Conhecimento) : le plus grand voyage d'études techniques du Centre Technologique (CTC) de l'UFSC.",
+          pt: "VMC 2025 (Volta ao Mundo do Conhecimento): a maior viagem técnica do Centro Tecnológico (CTC) da UFSC."
+        }
+      }
+    ],
+    textos: {
+      en: {
+        titulo: "PET EEL — Tutorial Education Program in Electrical Engineering",
+        resumo: "Two-year tenure at UFSC's academic excellence group in Electrical Engineering: leadership roles, selection process management, MATLAB/Simulink training, engineering projects, and organization of major national technical trips (VMC).",
+        altCapa: "Gustavo Denardi França wearing the PET EEL polo shirt",
+        tags: ["Leadership", "MATLAB", "Simulink", "Event Management", "Networking"],
+        funcao: "Member & Management Coordinator",
+        periodo: "Apr 2024 – Apr 2026",
+        ferramentas: "MATLAB, Simulink, Project & People Management",
+        contexto: "Academic Excellence Group — UFSC",
+        ctaTexto: "Visit the PET EEL website",
+        tituloContexto: "About PET EEL & My Experience",
+        contextoTecnico: [
+          "### What is PET EEL?",
+          "The Tutorial Education Program in Electrical and Electronic Engineering (PET EEL) at the Federal University of Santa Catarina (UFSC) is an academic excellence group supported by the Brazilian Ministry of Education. Structured around the triad of teaching, research, and university extension, the program brings together undergraduate engineering students to foster technical mastery, leadership, professional maturity, and collective impact across the university.",
+          "### Leadership, Teamwork & Technical Training",
+          "During my stay in the group, I took on leadership positions—including Management Coordinator—and directly organized the program's competitive selection process for new members. Working in a high-demand collaborative environment taught me a great deal about teamwork, accountability, and professionalism.",
+          "On the technical side, PET EEL provided structured training in key engineering software such as MATLAB and Simulink, alongside hands-on internal development projects like Spider Sense, bridging classroom theory with practical hardware and software execution.",
+          "### Organizing VMC — Technical Trips Across Brazil",
+          "One of the highlights of my time in the group was serving on the organizing committee of Volta ao Mundo do Conhecimento (VMC), the largest technical trip of UFSC's Technological Center (CTC). I helped organize two editions, managing logistics, corporate outreach, and student delegations to major engineering hubs in Brazil:",
+          "São Paulo Edition: technical visits to leading industry and research centers, including Embraer, WEG (Jaraguá do Sul), and INPE (National Institute for Space Research).",
+          "Rio de Janeiro Edition: technical visits to the Brazilian National System Operator (ONS — Rio de Janeiro), the Angra Nuclear Power Plant (Usina de Angra), Nidec (Joinville), and Mercedes-Benz (São Bernardo do Campo).",
+          "### Networking & Impact on My International Exchange",
+          "Beyond technical and organizational growth, PET EEL offers an exceptional alumni network of former members working at renowned companies and institutions in Brazil and abroad—a connection that continuously enriches both academic and career perspectives. My tenure in this excellence group was deeply rewarding and played a decisive role in preparing me for my international double-degree exchange in France."
+        ],
+        diagrama: {
+          mostrar: false
+        },
+        resultados: [],
+        conclusao: []
+      },
+      fr: {
+        titulo: "PET EEL — Programme d'Éducation Tutorielle en Génie Électrique",
+        resumo: "Parcours de deux ans au sein du groupe d'excellence académique en Génie Électrique de l'UFSC : responsabilités de leadership, organisation du processus de sélection, formation MATLAB/Simulink, projets d'ingénierie et organisation des voyages techniques VMC.",
+        altCapa: "Gustavo Denardi França portant le polo du PET EEL",
+        tags: ["Leadership", "MATLAB", "Simulink", "Gestion d'événements", "Réseau"],
+        funcao: "Membre et Coordinateur de Gestion",
+        periodo: "Avr 2024 – Avr 2026",
+        ferramentas: "MATLAB, Simulink, Gestion de projets et d'équipes",
+        contexto: "Groupe d'Excellence Académique — UFSC",
+        ctaTexto: "Visiter le site du PET EEL",
+        tituloContexto: "À propos du PET EEL et mon parcours",
+        contextoTecnico: [
+          "### Qu'est-ce que le PET EEL ?",
+          "Le Programme d'Éducation Tutorielle en Génie Électrique et Électronique (PET EEL) de l'Université Fédérale de Santa Catarina (UFSC) est un groupe d'excellence académique articulé autour de l'enseignement, de la recherche et de l'extension universitaire. Il rassemble des étudiants ingénieurs sélectionnés pour développer simultanément leurs compétences techniques, leur sens des responsabilités et leur maturité professionnelle.",
+          "### Leadership, Travail d'Équipe et Formation Technique",
+          "Au cours de mon engagement au sein du groupe, j'ai occupé des postes de leadership — notamment Coordinateur de Gestion — et organisé le processus de sélection des nouveaux membres. Cette expérience m'a énormément apporté en matière de travail collaboratif, d'organisation et de professionnalisme.",
+          "Sur le plan technique, le PET EEL m'a permis de me former à des outils essentiels de l'ingénierie tels que MATLAB et Simulink, et de concevoir des projets internes concrets comme Spider Sense, reliant théorie académique et réalisation pratique.",
+          "### Organisation de la VMC — Voyages Techniques Industriels",
+          "J'ai également fait partie du comité d'organisation de la Volta ao Mundo do Conhecimento (VMC), le plus grand voyage d'études techniques du Centre Technologique (CTC) de l'UFSC. J'ai contribué à l'organisation de deux éditions complètes, mêlant logistique, relations entreprises et coordination des étudiants :",
+          "Édition São Paulo : visites techniques au sein d'acteurs majeurs de l'industrie et de la recherche, tels qu'Embraer, WEG (Jaraguá do Sul) et l'INPE (Institut National de Recherche Spatiale).",
+          "Édition Rio de Janeiro : visites techniques auprès de l'Opérateur National du Système Électrique (ONS — Rio de Janeiro), de la Centrale Nucléaire d'Angra, de Nidec (Joinville) et de Mercedes-Benz (São Bernardo do Campo).",
+          "### Réseau d'Anciens Membres et Tremplin vers l'Échange",
+          "Le PET EEL se distingue également par la richesse de son réseau d'anciens membres (alumni), aujourd'hui en poste dans des entreprises de renom au Brésil et à l'international. Ce séjour extrêmement enrichissant au sein d'un groupe d'excellence a été un atout majeur dans la préparation et la réussite de mon échange en double diplôme en France."
+        ],
+        diagrama: {
+          mostrar: false
+        },
+        resultados: [],
+        conclusao: []
+      },
+      pt: {
+        titulo: "PET EEL — Programa de Educação Tutorial da Engenharia Elétrica",
+        resumo: "Trajetória de dois anos no grupo de excelência acadêmica da Engenharia Elétrica da UFSC: cargos de liderança, organização de processos seletivos, capacitação em MATLAB/Simulink, projetos técnicos e organização da maior viagem técnica do CTC (VMC).",
+        altCapa: "Gustavo Denardi França vestindo a polo do PET EEL",
+        tags: ["Liderança", "MATLAB", "Simulink", "Gestão de Eventos", "Networking"],
+        funcao: "Membro e Coordenador de Gestão",
+        periodo: "Abr 2024 – Abr 2026",
+        ferramentas: "MATLAB, Simulink, Gestão de Pessoas e Projetos",
+        contexto: "Grupo de Excelência Acadêmica — UFSC",
+        ctaTexto: "Acessar o site do PET EEL",
+        tituloContexto: "Sobre o PET EEL e Minha Trajetória",
+        contextoTecnico: [
+          "### O que é o PET EEL?",
+          "O Programa de Educação Tutorial das Engenharias Elétrica e Eletrônica (PET EEL) da Universidade Federal de Santa Catarina (UFSC) é um grupo de excelência acadêmica estruturado sobre a tríade ensino, pesquisa e extensão. O programa reúne estudantes selecionados com o objetivo de oferecer uma formação ampla que combina aprofundamento técnico, protagonismo estudantil e desenvolvimento profissional.",
+          "### Liderança, Profissionalismo e Capacitação Técnica",
+          "Durante minha permanência no PET EEL, ocupei cargos de liderança — incluindo a função de Coordenador de Gestão — e fui responsável pela organização do processo seletivo de novos membros. O ritmo de entregas e a convivência no grupo me proporcionaram um enorme aprendizado em trabalho em equipe, comunicação e profissionalismo.",
+          "Na parte técnica, me capacitei em ferramentas fundamentais da engenharia elétrica, como MATLAB e Simulink, além de desenvolver projetos práticos internos como o Spider Sense, aplicando na prática os conhecimentos construídos ao longo da graduação.",
+          "### Organização da VMC — Volta ao Mundo do Conhecimento",
+          "Integrei também a comissão organizadora da Volta ao Mundo do Conhecimento (VMC), a maior viagem técnica do Centro Tecnológico (CTC) da UFSC. Participei da organização de duas edições, cuidando do planejamento, contato institucional com empresas e logística dos estudantes:",
+          "Edição São Paulo: roteiro com visitas técnicas a referências industriais e científicas como Embraer, WEG (Jaraguá do Sul) e INPE (Instituto Nacional de Pesquisas Espaciais).",
+          "Edição Rio de Janeiro: roteiro com visitas técnicas ao Operador Nacional do Sistema Elétrico (ONS — Rio de Janeiro), à Usina Nuclear de Angra, à Nidec (Joinville) e à Mercedes-Benz (São Bernardo do Campo).",
+          "### Networking e Impacto no Intercâmbio",
+          "Outro grande diferencial do grupo é o networking construído com ex-membros que hoje atuam em diversas empresas e instituições de renome, gerando trocas valiosas de experiência e visão de carreira. A passagem pelo PET EEL foi extremamente enriquecedora e teve um papel decisivo na minha preparação para o intercâmbio de dupla diplomação na França."
+        ],
+        diagrama: {
+          mostrar: false
+        },
+        resultados: [],
+        conclusao: []
       }
     }
   }
