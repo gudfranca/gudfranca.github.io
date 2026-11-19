@@ -14,7 +14,6 @@
   let idiomaAtual = 'en';
   let atualizarFiltroBusca = null;
 
-  // Remove acentos e caixa para a busca ("eletrônica" / "électronique" casa com "eletronica")
   const normalizar = (txt) =>
     String(txt || '')
       .normalize('NFD')
@@ -22,7 +21,6 @@
       .toLowerCase()
       .trim();
 
-  // Busca valor aninhado no objeto de traduções, ex: obterTexto("hero.role")
   const obterTexto = (chave, lang = idiomaAtual) => {
     const dic = (window.TRADUCOES && window.TRADUCOES[lang]) || (window.TRADUCOES && window.TRADUCOES.en) || {};
     return chave.split('.').reduce((acc, parte) => (acc && acc[parte] !== undefined ? acc[parte] : null), dic);
@@ -66,12 +64,10 @@
       if (val !== null) el.setAttribute('alt', val);
     });
 
-    // Atualiza estado visual dos botões EN | FR | PT
     $$('.lang-btn').forEach((btn) => {
       btn.setAttribute('aria-pressed', String(btn.dataset.lang === idiomaAtual));
     });
 
-    // Atualiza aria-label do botão de tema conforme idioma atual
     const botaoTema = $('#tema');
     if (botaoTema) {
       const temaEscuro = document.documentElement.dataset.theme !== 'light';
@@ -81,7 +77,6 @@
       );
     }
 
-    // Se estiver na página inicial, atualiza <title> e <meta name="description"> gerais
     if ($('#projetos-lista')) {
       const tituloMeta = obterTexto('meta.title');
       const descMeta = obterTexto('meta.description');
@@ -201,17 +196,14 @@
 
     const t = (proj.textos && (proj.textos[idiomaAtual] || proj.textos.en)) || {};
 
-    // Metadados da aba do navegador
     document.title = `${t.titulo || proj.id} | Gustavo Denardi França`;
     const metaDesc = $('meta[name="description"]');
     if (metaDesc && t.resumo) metaDesc.setAttribute('content', t.resumo);
 
-    // Cabeçalho e resumo
     tituloEl.textContent = t.titulo || '';
     const resumoEl = $('#proj-resumo');
     if (resumoEl) resumoEl.textContent = t.resumo || '';
 
-    // Tags clicáveis que levam para a busca na página inicial
     const tagsEl = $('#proj-tags');
     if (tagsEl) {
       tagsEl.innerHTML = '';
@@ -226,7 +218,6 @@
       });
     }
 
-    // Metadados técnicos (Função, Período, Ferramentas, Contexto)
     const mapaMeta = {
       '#proj-funcao': t.funcao,
       '#proj-periodo': t.periodo,
@@ -326,14 +317,21 @@
       }
     }
 
-    // Contexto técnico (parágrafos)
+    // Contexto técnico (suporta parágrafos e subtítulos iniciados por "### ")
     const proseEl = $('#proj-prose');
     if (proseEl) {
       proseEl.innerHTML = '';
-      (t.contextoTecnico || []).forEach((paragrafo) => {
-        const p = document.createElement('p');
-        p.textContent = paragrafo;
-        proseEl.appendChild(p);
+      (t.contextoTecnico || []).forEach((item) => {
+        if (typeof item === 'string' && item.startsWith('### ')) {
+          const h3 = document.createElement('h3');
+          h3.className = 'prose__sub';
+          h3.textContent = item.slice(4).trim();
+          proseEl.appendChild(h3);
+        } else {
+          const p = document.createElement('p');
+          p.textContent = item;
+          proseEl.appendChild(p);
+        }
       });
     }
 
@@ -440,7 +438,7 @@
       }
     }
 
-    // Links externos adicionais no final da página (oculta a seção se não houver outros links)
+    // Links externos adicionais no final da página
     const linksSecao = $('#proj-links-secao');
     const linksContainer = $('#proj-links');
     if (linksSecao && linksContainer) {
