@@ -482,7 +482,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/pet-01.jpg",
+        src: "assets/img/projetos/pet-01.JPG",
         larga: true,
         alt: {
           en: "PET EEL UFSC members group photo from the 2024.1 semester",
