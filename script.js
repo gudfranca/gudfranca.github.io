@@ -265,14 +265,26 @@
       }
     }
 
-    // Botão centralizado do relatório (antes da galeria)
+    // Botão centralizado antes da galeria (relatório PDF ou site oficial)
     const relatorioCta = $('#proj-relatorio-cta');
     const relatorioBtn = $('#proj-relatorio-btn');
+    const urlSite = proj.links && proj.links.site ? proj.links.site.trim() : '';
     const urlRelatorio = proj.links && proj.links.relatorio ? proj.links.relatorio.trim() : '';
+    const urlCta = urlSite || urlRelatorio;
     if (relatorioCta && relatorioBtn) {
-      if (urlRelatorio && urlRelatorio !== '#') {
+      if (urlCta && urlCta !== '#') {
         relatorioCta.hidden = false;
-        relatorioBtn.href = urlRelatorio;
+        relatorioBtn.href = urlCta;
+        const spanCta = $('span', relatorioBtn);
+        if (spanCta) {
+          spanCta.textContent =
+            t.ctaTexto || obterTexto('projectPage.btnReport') || 'Read technical report';
+        }
+        const svgCta = $('svg', relatorioBtn);
+        if (svgCta && urlSite) {
+          svgCta.innerHTML =
+            '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>';
+        }
       } else {
         relatorioCta.hidden = true;
       }
@@ -317,7 +329,12 @@
       }
     }
 
-    // Contexto técnico (suporta parágrafos e subtítulos iniciados por "### ")
+    // Contexto técnico / Sobre (permite título customizado e subtítulos com "### ")
+    const tituloContextoEl = $('#titulo-contexto');
+    if (tituloContextoEl && t.tituloContexto) {
+      tituloContextoEl.textContent = t.tituloContexto;
+    }
+
     const proseEl = $('#proj-prose');
     if (proseEl) {
       proseEl.innerHTML = '';
@@ -335,10 +352,19 @@
       });
     }
 
-    // Diagrama SVG Interativo e Tabela de Resultados
+    // Diagrama SVG Interativo e Tabela de Resultados (oculta seção inteira se ambos forem vazios)
+    const temDiagrama = Boolean(t.diagrama && t.diagrama.mostrar);
+    const linhasTabela = Array.isArray(t.resultados) ? t.resultados : [];
+    const temTabela = linhasTabela.length > 0;
+
+    const resultadosSecao = $('#proj-resultados-secao');
+    if (resultadosSecao) {
+      resultadosSecao.hidden = !temDiagrama && !temTabela;
+    }
+
     const diagEl = $('#proj-diagrama');
     if (diagEl) {
-      if (t.diagrama && t.diagrama.mostrar) {
+      if (temDiagrama) {
         diagEl.hidden = false;
         const mapaSvg = {
           '#dg-titulo': t.diagrama.tituloSvg,
@@ -402,11 +428,10 @@
     const tabelaWrap = $('#proj-tabela-wrap');
     const tabelaCorpo = $('#proj-tabela-corpo');
     if (tabelaWrap && tabelaCorpo) {
-      const linhas = Array.isArray(t.resultados) ? t.resultados : [];
-      if (linhas.length > 0) {
+      if (temTabela) {
         tabelaWrap.hidden = false;
         tabelaCorpo.innerHTML = '';
-        linhas.forEach((linha) => {
+        linhasTabela.forEach((linha) => {
           const tr = document.createElement('tr');
           ['metrica', 'valor', 'obs'].forEach((campo) => {
             const td = document.createElement('td');
