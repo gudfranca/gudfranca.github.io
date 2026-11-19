@@ -7,11 +7,11 @@ window.PROJETOS = [
     ordem: 1,
     destaque: true,
     categoria: "Embedded Systems & IoT",
-    imagemCapa: "assets/img/projetos/esp32-capa.jpg",
+    imagemCapa: "assets/img/projetos/esp32-capa.jpeg",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/esp32-capa.jpg"
+      poster: "assets/img/projetos/esp32-capa.jpeg"
     },
     links: {
       github: "",
@@ -20,7 +20,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/esp32-01.jpg",
+        src: "assets/img/projetos/esp32-01.jpeg",
         larga: true,
         alt: {
           en: "Final prototype of the Spider Sense wireless system with master unit and 5 interactive button modules",
@@ -34,7 +34,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-02.jpg",
+        src: "assets/img/projetos/esp32-02.jpeg",
         larga: false,
         alt: {
           en: "First wired prototype (MVP) of Spider Sense with 6 arcade buttons and LCD screen",
@@ -48,7 +48,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-03.jpg",
+        src: "assets/img/projetos/esp32-03.jpeg",
         larga: false,
         alt: {
           en: "First wireless tests of Spider Sense showing the master module with LCD display alongside the yellow and red wireless button modules",
@@ -240,11 +240,11 @@ window.PROJETOS = [
     ordem: 2,
     destaque: true,
     categoria: "Power Systems & Synchrophasors",
-    imagemCapa: "assets/img/projetos/medfasee-capa.jpg",
+    imagemCapa: "assets/img/projetos/medfasee-capa",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/medfasee-capa.jpg"
+      poster: "assets/img/projetos/medfasee-capa"
     },
     links: {
       github: "",
@@ -253,7 +253,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/medfasee-01.jpg",
+        src: "assets/img/projetos/medfasee-01",
         larga: true,
         alt: {
           en: "Map of the Brazilian National Interconnected System (SIN) monitored via synchronized phasor measurement units",
@@ -267,7 +267,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-02.jpg",
+        src: "assets/img/projetos/medfasee-02.png",
         larga: false,
         alt: {
           en: "High-resolution PMU frequency event plot generated in MedPlot evaluating ONS operational thresholds",
@@ -281,7 +281,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-03.jpg",
+        src: "assets/img/projetos/medfasee-03.png",
         larga: false,
         alt: {
           en: "Multiband power spectral density (PSD) segmentation across four frequency bands for oscillation analysis",
@@ -295,7 +295,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/medfasee-04.jpg",
+        src: "assets/img/projetos/medfasee-04.png",
         larga: false,
         alt: {
           en: "Oscillation detection severity evaluation across frequency bands using real-world PMU measurements",
