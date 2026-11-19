@@ -7,11 +7,11 @@ window.PROJETOS = [
     ordem: 1,
     destaque: true,
     categoria: "Embedded Systems & IoT",
-    imagemCapa: "assets/img/projetos/esp32-capa.jpeg",
+    imagemCapa: "assets/img/projetos/esp32-capa.jpg",
     video: {
       url: "",
       tipo: "youtube",
-      poster: "assets/img/projetos/esp32-capa.jpeg"
+      poster: "assets/img/projetos/esp32-capa.jpg"
     },
     links: {
       github: "",
@@ -20,7 +20,7 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/esp32-011.jpeg",
+        src: "assets/img/projetos/esp32-01.jpg",
         larga: true,
         alt: {
           en: "Final prototype of the Spider Sense wireless system with master unit and 5 interactive button modules",
@@ -34,7 +34,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-01.jpeg",
+        src: "assets/img/projetos/esp32-02.jpg",
         larga: false,
         alt: {
           en: "First wired prototype (MVP) of Spider Sense with 6 arcade buttons and LCD screen",
@@ -48,21 +48,7 @@ window.PROJETOS = [
         }
       },
       {
-        src: "assets/img/projetos/esp32-02.jpeg",
-        larga: false,
-        alt: {
-          en: "First wireless tests of Spider Sense showing the master module with LCD display alongside the yellow and red wireless button modules",
-          fr: "Premiers tests sans fil du Spider Sense montrant le module maître avec écran LCD aux côtés des modules de boutons jaune et rouge",
-          pt: "Primeiros testes wireless do Spider Sense mostrando o módulo mestre com display LCD ao lado dos módulos de botões amarelo e vermelho"
-        },
-        legenda: {
-          en: "First wireless tests: master module with integrated LCD display and illuminated start button communicating via ESP-NOW with the first two autonomous modules (yellow and red).",
-          fr: "Premiers tests sans fil : module maître avec écran LCD intégré et bouton lumineux communiquant via ESP-NOW avec les deux premiers modules autonomes (jaune et rouge).",
-          pt: "Primeiros testes wireless: módulo mestre com display LCD integrado e botão iluminado comunicando-se via ESP-NOW com os dois primeiros módulos autônomos (amarelo e vermelho)."
-        }
-      },
-      {
-        src: "assets/img/projetos/esp32-03.jpeg",
+        src: "assets/img/projetos/esp32-03.jpg",
         larga: false,
         alt: {
           en: "First wireless tests of Spider Sense showing the master module with LCD display alongside the yellow and red wireless button modules",
@@ -84,9 +70,23 @@ window.PROJETOS = [
           pt: "Modelagem e fatiamento 3D da tampa superior do módulo mestre com recortes para o display LCD e botão de reset"
         },
         legenda: {
-          en: "3D modeling and slicing of the top cover with cutouts for the LCD screen and start/reset button.",
-          fr: "Modélisation et tranchage 3D du couvercle supérieur avec découpes pour l'écran LCD et le bouton.",
-          pt: "Modelagem e fatiamento 3D em filamento PLA da tampa superior com recortes para o display LCD e o botão de reset."
+          en: "3D modeling and slicing (Anycubic i3 Mega S / PLA, 32.66 g, 2h43m) of the top cover with cutouts for the LCD screen and start/reset button.",
+          fr: "Modélisation et tranchage 3D (Anycubic i3 Mega S / PLA, 32,66 g, 2h43m) du couvercle supérieur avec découpes pour l'écran LCD et le bouton.",
+          pt: "Modelagem e fatiamento 3D em filamento PLA (32,66 g, tempo estimado de 2h43min) da tampa superior com recortes para o display LCD e o botão de reset."
+        }
+      },
+      {
+        src: "assets/img/projetos/esp32-05.jpg",
+        larga: false,
+        alt: {
+          en: "3D slicing of the cylindrical base enclosure that houses the internal electronics and battery",
+          fr: "Tranchage 3D de la base cylindrique abritant l'électronique interne et la batterie",
+          pt: "Modelagem e fatiamento 3D da base cilíndrica das carcaças para abrigar o hardware e a bateria"
+        },
+        legenda: {
+          en: "3D modeling and slicing (Anycubic i3 Mega S / PLA, 53.12 g, 5h12m) of the ergonomic cylindrical base designed to house the ESP32 and battery circuit.",
+          fr: "Modélisation et tranchage 3D (Anycubic i3 Mega S / PLA, 53,12 g, 5h12m) de la base cylindrique ergonomique abritant l'ESP32 et la batterie.",
+          pt: "Modelagem e fatiamento 3D em filamento PLA (53,12 g, tempo estimado de 5h12min) da base cilíndrica ergonômica projetada para abrigar o circuito e a bateria."
         }
       }
     ],
@@ -239,7 +239,7 @@ window.PROJETOS = [
     id: "medfasee",
     ordem: 2,
     destaque: true,
-    categoria: "Power Systems",
+    categoria: "Power Systems & Synchrophasors",
     imagemCapa: "assets/img/projetos/medfasee-capa.jpg",
     video: {
       url: "",
@@ -253,154 +253,211 @@ window.PROJETOS = [
     },
     galeria: [
       {
-        src: "assets/img/projetos/medfasee-capa.jpg",
+        src: "assets/img/projetos/medfasee-01.jpg",
         larga: true,
         alt: {
-          en: "Phasor measurement oscillation chart from the MedFasee system",
-          fr: "Graphique des oscillations issues des mesures de synchrophaseurs MedFasee",
-          pt: "Gráfico de oscilações em medições fasoriais do MedFasee"
+          en: "Map of the Brazilian National Interconnected System (SIN) monitored via synchronized phasor measurement units",
+          fr: "Carte du Système Interconnecté National brésilien (SIN) surveillé par unités de mesure de phaseurs synchronisés (PMU)",
+          pt: "Mapa do Sistema Interligado Nacional (SIN) monitorado por Unidades de Medição Fasorial Sincronizada (PMUs)"
         },
         legenda: {
-          en: "Synchronized phasor measurement analysis of low-frequency power system oscillations.",
-          fr: "Analyse des mesures de synchrophaseurs pour le suivi des oscillations basse fréquence.",
-          pt: "Análise de medições fasoriais sincronizadas para monitoramento de oscilações de baixa frequência."
+          en: "Brazilian National Interconnected System (SIN): wide-area monitoring context for PMU power quality assessment and electromechanical oscillation detection.",
+          fr: "Système Interconnecté National brésilien (SIN) : cadre de surveillance étendue (WAMS) pour la qualité de l'énergie et la détection d'oscillations par PMU.",
+          pt: "Sistema Interligado Nacional (SIN): contexto de monitoramento fasorial em larga escala para avaliação de QEE e detecção de oscilações via PMUs."
+        }
+      },
+      {
+        src: "assets/img/projetos/medfasee-02.jpg",
+        larga: false,
+        alt: {
+          en: "High-resolution PMU frequency event plot generated in MedPlot evaluating ONS operational thresholds",
+          fr: "Graphique haute résolution d'un événement de fréquence PMU sous MedPlot évaluant les limites opérationnelles de l'ONS",
+          pt: "Gráfico de evento de frequência em PMU gerado no MedPlot avaliando os critérios operacionais do ONS"
+        },
+        legenda: {
+          en: "Phase 1 — MedFasee (Power Quality): 60 phasors/s frequency event inspection in MedPlot against ONS grid compliance thresholds (59.8 Hz – 60.2 Hz, 50 ms limit).",
+          fr: "Phase 1 — MedFasee (QEE) : Analyse d'un événement de fréquence (60 phaseurs/s) sous MedPlot selon les critères de conformité de l'ONS (59,8 – 60,2 Hz, limite de 50 ms).",
+          pt: "Fase 1 — MedFasee (QEE): Inspeção de evento de frequência (60 fasores/s) no MedPlot frente aos critérios de conformidade do ONS (faixa de 59,8 a 60,2 Hz, limite de 50 ms)."
+        }
+      },
+      {
+        src: "assets/img/projetos/medfasee-03.jpg",
+        larga: false,
+        alt: {
+          en: "Multiband power spectral density (PSD) segmentation across four frequency bands for oscillation analysis",
+          fr: "Segmentation multibande de la densité spectrale de puissance (PSD) en quatre bandes de fréquence pour l'analyse d'oscillations",
+          pt: "Segmentação multibanda da densidade espectral de potência (PSD) em quatro faixas de frequência para análise de oscilações"
+        },
+        legenda: {
+          en: "Phase 2 — OpenWAMS: Multiband frequency segmentation (0.01–0.15 Hz, 0.15–1.0 Hz, 1.0–5.0 Hz, and > 5 Hz) used in RMS energy and Welch PSD oscillation detection.",
+          fr: "Phase 2 — OpenWAMS : Découpage multibande (0,01–0,15 Hz ; 0,15–1,0 Hz ; 1,0–5,0 Hz et > 5 Hz) utilisé pour la détection par énergie RMS et PSD de Welch.",
+          pt: "Fase 2 — OpenWAMS: Segmentação em quatro faixas de frequência (0,01–0,15 Hz; 0,15–1,0 Hz; 1,0–5,0 Hz e > 5 Hz) aplicada na detecção por energia RMS e PSD de Welch."
+        }
+      },
+      {
+        src: "assets/img/projetos/medfasee-04.jpg",
+        larga: false,
+        alt: {
+          en: "Oscillation detection severity evaluation across frequency bands using real-world PMU measurements",
+          fr: "Évaluation de la sévérité des oscillations par bande de fréquence à partir de mesures PMU réelles",
+          pt: "Avaliação da presença e severidade de oscilações por faixa de frequência a partir de medições reais de PMU"
+        },
+        legenda: {
+          en: "Phase 2 — OpenWAMS: Detection evaluation comparing moving-window RMS energy with information-theoretic Oscillation Presence Index (OPI) thresholds to suppress false alarms.",
+          fr: "Phase 2 — OpenWAMS : Évaluation comparant l'énergie RMS en fenêtre glissante et l'indice OPI issu de la théorie de l'information afin de limiter les fausses alarmes.",
+          pt: "Fase 2 — OpenWAMS: Avaliação de detecção comparando energia RMS em janela móvel e limiares do índice OPI (Teoria da Informação) para mitigar falsos positivos."
         }
       }
     ],
     textos: {
       en: {
-        titulo: "MedFasee Power System Oscillation Analysis",
-        resumo: "Processing of synchronized phasor measurements (PMU) from the MedFasee project to identify and characterize low-frequency electromechanical oscillations in the power grid.",
-        altCapa: "Chart of oscillations in phasor measurements from MedFasee",
-        tags: ["Python", "MATLAB", "Synchrophasors", "Signal Processing"],
-        funcao: "Undergraduate Researcher (LabPlan - UFSC)",
-        periodo: "2025 – 2026",
-        ferramentas: "Python, MATLAB, MedPlot, PMU data",
-        contexto: "Power System Stability Research (MedFasee / ONS)",
+        titulo: "Power Quality & Oscillation Detection in Synchrophasor Systems (MedFasee & OpenWAMS)",
+        resumo: "Undergraduate research at LabPlan (UFSC) in collaboration with the Brazilian National System Operator (ONS), covering PMU-based Power Quality (QEE) compliance in wind farms and multiband electromechanical oscillation detection.",
+        altCapa: "Synchrophasor power quality and oscillation monitoring in the Brazilian power grid",
+        tags: ["Python", "Synchrophasors", "PMU", "Power Quality", "Signal Processing"],
+        funcao: "Undergraduate Researcher (LabPlan – UFSC)",
+        periodo: "Mar 2025 – Sep 2026",
+        ferramentas: "Python, MedPlot, PMU Data (60 phasors/s), ONS VPN",
+        contexto: "MedFasee (QEE) & OpenWAMS Projects — LabPlan / ONS",
         contextoTecnico: [
-          "Synchronized Phasor Measurement Units (PMUs) provide high-resolution temporal data of voltage and frequency across the Brazilian National Interconnected System (SIN).",
-          "This project processes synchrophasor data series using Python and MATLAB to detect, filter, and characterize low-frequency electromechanical oscillations and damping ratios in real-world grid events.",
-          "The analysis supports wide-area monitoring, dynamic stability assessment, and validation of oscillation detection routines."
+          "Conducted at the Electric Energy Systems Planning Laboratory (LabPlan – UFSC) in partnership with the Brazilian National System Operator (ONS), this research evolved across two complementary fronts in Wide Area Monitoring Systems (WAMS) using real-world Phasor Measurement Unit (PMU) data.",
+          "### Phase 1 — MedFasee Project: Power Quality (QEE) Assessment",
+          "During the initial phase within the MedFasee project, my activities focused on the monthly Power Quality (QEE) evaluation of wind power complexes and buses monitored by PMUs across Brazil's National Interconnected System (SIN). Accessing synchronized measurements at 60 phasors per second through the ONS VPN and visualizing waveforms in MedPlot, I analyzed key electrical variables including frequency, three-phase voltages (phases A, B, and C), active power, and reactive power.",
+          "Using automated Python routines, I identified monthly grid events—characterized by abrupt or significant deviations in frequency, voltage, or power—compiled verification spreadsheets, and evaluated the most severe disturbances per PMU against ONS regulatory requirements. For instance, frequency compliance verification checks whether excursions below 59.8 Hz or above 60.2 Hz persist for longer than 50 ms (such as a 54 ms event in March 2025 reaching 59.72 Hz and 60.23 Hz without violating the duration limit). These findings were formalized into monthly technical reports delivered to the ONS.",
+          "### Phase 2 — OpenWAMS Project: Electromechanical Oscillation Detection",
+          "Subsequently, I joined the OpenWAMS project—also in partnership with the ONS—dedicated to researching and validating automated oscillation detection methods in synchrophasor time series. I worked with a Python-based Multiband RMS Energy Detector capable of batch offline analysis (zero-phase filtering), simulated real-time block processing (rectangular and Kaiser windows), and side-by-side comparisons, incorporating persistence timers and signal-specific threshold calibration across four standard frequency bands: very slow/governor modes (0.01–0.15 Hz), inter-area modes (0.15–1.0 Hz), local/intra-plant modes (1.0–5.0 Hz), and high-frequency/torsional modes (> 5 Hz).",
+          "To overcome known limitations of conventional RMS-energy detectors—namely heavy reliance on historical baselining and false alarms triggered by sudden step changes or ramps in Band 1—my research also incorporated information-theoretic spectral methods from the recent IEEE literature, specifically the Oscillation Presence Index (OPI). Computed from the normalized Welch Power Spectral Density (PSD) and scaled Shannon entropy (spectral flatness), OPI provides a standardized 0-to-1 severity metric (with thresholds K1 = 0.35 and K2 = 0.65) independent of PMU location or variable scale."
         ],
         diagrama: {
           mostrar: true,
-          tituloSvg: "Block diagram of the synchrophasor analysis pipeline",
-          descSvg: "PMU measurements from the MedFasee network are filtered and analyzed in Python and MATLAB to extract oscillation modes.",
-          bloco1Titulo: "PMU / MedFasee",
-          bloco1Sub: "synchronized data",
-          bloco2Titulo: "Pre-processing",
-          bloco2Sub: "filtering & detrending",
-          blocoCentralTitulo: "Python / MATLAB",
-          blocoCentralSub: "spectral & modal analysis",
-          blocoSaidaTitulo: "Grid Modes",
-          blocoSaidaSub: "frequency & damping",
-          legenda: "Interactive pipeline diagram — hover or click each block to inspect the signal processing stages.",
-          dicaPadrao: "Hover or tap any block above to inspect its role in the synchrophasor analysis pipeline.",
+          tituloSvg: "Block diagram of the LabPlan PMU Power Quality and Oscillation Detection workflow",
+          descSvg: "Synchronized PMU measurements from the SIN feed MedPlot QEE compliance checks and Python OpenWAMS multiband oscillation detectors.",
+          bloco1Titulo: "PMUs / MedFasee",
+          bloco1Sub: "60 phasors/s (SIN)",
+          bloco2Titulo: "QEE & MedPlot",
+          bloco2Sub: "ONS grid criteria",
+          blocoCentralTitulo: "OpenWAMS (Python)",
+          blocoCentralSub: "RMS & PSD / OPI",
+          blocoSaidaTitulo: "Modes & Reports",
+          blocoSaidaSub: "0.01 to > 5 Hz",
+          legenda: "Interactive research workflow — hover or click each block to inspect how PMU measurements are processed across MedFasee and OpenWAMS.",
+          dicaPadrao: "Hover or tap any block above to inspect each stage of the synchrophasor analysis workflow.",
           detalhes: {
-            b1: "Data Acquisition: Synchronized Phasor Measurement Units (PMUs) installed across the Brazilian grid (MedFasee) record voltage and frequency phasors via GPS time-stamping.",
-            b2: "Signal Conditioning: Removal of missing samples, detrending, and band-pass filtering (0.1 – 2.0 Hz) to isolate electromechanical oscillation modes.",
-            bc: "Modal & Spectral Estimation: Python and MATLAB routines compute power spectral density and modal parameters during system disturbances.",
-            bs: "Stability Assessment: Identification of dominant oscillation frequencies and damping ratios to support wide-area power system monitoring (WAMS)."
+            b1: "Synchronized Data Acquisition: PMUs distributed across Brazil's SIN record frequency, three-phase voltages (Va, Vb, Vc), and active/reactive power at 60 phasors/s, accessed securely via ONS VPN.",
+            b2: "MedFasee Power Quality (QEE): Monthly event detection scripts and MedPlot inspection verify wind-farm and grid disturbances against ONS operational limits (e.g., 59.8–60.2 Hz for > 50 ms).",
+            bc: "OpenWAMS Detection Engine: Python multiband filtering and RMS energy evaluation (offline & real-time modes with persistence timers), complemented by Welch PSD and Shannon-entropy OPI research.",
+            bs: "Operational Diagnostics: Classification of sustained oscillations across 4 frequency bands (governor, inter-area, local, high-frequency) and delivery of monthly QEE compliance reports to the ONS."
           }
         },
         resultados: [
-          { metrica: "Frequency band analyzed", valor: "0.1 – 2.0 Hz", obs: "Electromechanical oscillation modes" },
-          { metrica: "Data source", valor: "PMU / MedFasee", obs: "Wide-area synchronized measurements" },
-          { metrica: "Processing tools", valor: "Python & MATLAB", obs: "Automated signal analysis scripts" }
+          { metrica: "PMU Sampling Resolution", valor: "60 phasors/s", obs: "Frequency, 3-phase voltages, active & reactive power (SIN)" },
+          { metrica: "ONS Frequency QEE Criterion", valor: "59.8 – 60.2 Hz (≤ 50 ms)", obs: "Validated via MedPlot & Python monthly event reports" },
+          { metrica: "Multiband RMS Detector", valor: "4 Frequency Bands (0.01 to > 5 Hz)", obs: "RMS windows: 120 s, 20 s, 2 s, 0.3 s; Offline/Real-time modes" },
+          { metrica: "Spectral OPI Research Basis", valor: "0 – 1 Standardized Index", obs: "Welch PSD & spectral flatness (K1 = 0.35, K2 = 0.65); step-robust" }
         ],
         conclusao: [
-          "Processing synchronized phasor measurements from the MedFasee network provides clear visibility into the dynamic behavior of the Brazilian National Interconnected System (SIN).",
-          "Combining Python and MATLAB signal processing routines enables accurate identification of low-frequency electromechanical modes and damping ratios, contributing directly to power grid dynamic stability monitoring."
+          "Working across the MedFasee and OpenWAMS initiatives at LabPlan provided hands-on engineering experience with real-world synchrophasor measurements from the Brazilian National Interconnected System (SIN) under actual National System Operator (ONS) requirements.",
+          "Evaluating Power Quality compliance at high temporal resolution established a solid foundation in PMU instrumentation and grid standards, while investigating multiband RMS energy and information-theoretic PSD/OPI methods demonstrated how robust signal processing enhances real-time dynamic stability monitoring and situational awareness in modern power grids."
         ]
       },
       fr: {
-        titulo: "Analyse des Oscillations Électromécaniques MedFasee",
-        resumo: "Traitement de mesures de synchrophaseurs (PMU) du système MedFasee afin d'identifier et de caractériser les oscillations basse fréquence sur le réseau électrique.",
-        altCapa: "Graphique des oscillations dans les mesures de phaseurs MedFasee",
-        tags: ["Python", "MATLAB", "Synchrophaseurs", "Traitement du signal"],
-        funcao: "Chercheur en cycle ingénieur/licence (LabPlan - UFSC)",
-        periodo: "2025 – 2026",
-        ferramentas: "Python, MATLAB, MedPlot, données PMU",
-        contexto: "Recherche sur la stabilité des réseaux (MedFasee / ONS)",
+        titulo: "Qualité de l'Énergie et Détection d'Oscillations par Synchrophaseurs (MedFasee & OpenWAMS)",
+        resumo: "Recherche universitaire au LabPlan (UFSC) en partenariat avec l'opérateur national brésilien (ONS), portant sur l'évaluation de la qualité de l'énergie (QEE) par PMU dans les parcs éoliens et la détection multibande d'oscillations électromécaniques.",
+        altCapa: "Surveillance de la qualité de l'énergie et des oscillations par synchrophaseurs sur le réseau brésilien",
+        tags: ["Python", "Synchrophaseurs", "PMU", "Qualité de l'énergie", "Traitement du signal"],
+        funcao: "Chercheur en Cycle Ingénieur (LabPlan – UFSC)",
+        periodo: "Mars 2025 – Sept 2026",
+        ferramentas: "Python, MedPlot, Données PMU (60 phaseurs/s), VPN ONS",
+        contexto: "Projets MedFasee (QEE) & OpenWAMS — LabPlan / ONS",
         contextoTecnico: [
-          "Les unités de mesure de phaseurs synchronisés (PMU) fournissent des données temporelles à haute résolution de la tension et de la fréquence sur le système interconnecté national brésilien (SIN).",
-          "Ce projet traite les séries temporelles de synchrophaseurs sous Python et MATLAB afin de détecter, filtrer et caractériser les oscillations électromécaniques basse fréquence et leur amortissement lors d'événements réels sur le réseau.",
-          "Ces analyses contribuent à la surveillance étendue (WAMS) et à l'évaluation de la stabilité dynamique des systèmes électriques de puissance."
+          "Menés au Laboratoire de Planification des Systèmes d'Énergie Électrique (LabPlan – UFSC) en collaboration avec l'Opérateur National du Système Électrique brésilien (ONS), ces travaux de recherche se sont articulés autour de deux axes complémentaires en surveillance étendue (WAMS) basés sur des données réelles d'Unités de Mesure de Phaseurs Synchronisés (PMU).",
+          "### Phase 1 — Projet MedFasee : Qualité de l'Énergie Électrique (QEE)",
+          "Dans un premier temps, au sein du projet MedFasee, mes activités ont porté sur l'analyse mensuelle de la Qualité de l'Énergie Électrique (QEE) des parcs éoliens et des postes surveillés par PMU sur le Système Interconnecté National brésilien (SIN). À partir de mesures synchronisées à 60 phaseurs par seconde récupérées via le VPN de l'ONS et visualisées sous MedPlot, j'ai analysé la fréquence, les tensions triphasées (phases A, B et C) ainsi que les puissances active et réactive.",
+          "À l'aide de routines Python d'identification d'événements, j'ai extrait les perturbations mensuelles majeures de chaque PMU, structuré les feuilles de vérification et contrôlé leur conformité par rapport aux exigences normatives de l'ONS — notamment la règle imposant que les excursions de fréquence hors de la plage 59,8 Hz – 60,2 Hz ne dépassent pas 50 ms (comme l'événement de 54 ms analysé en mars 2025 avec des extrema de 59,72 Hz et 60,23 Hz, validé conforme). Ces analyses ont alimenté les rapports techniques mensuels remis à l'ONS.",
+          "### Phase 2 — Projet OpenWAMS : Détection d'Oscillations Électromécaniques",
+          "J'ai ensuite intégré le projet OpenWAMS, également conduit avec l'ONS, dédié à l'identification automatisée d'oscillations basse fréquence dans les séries temporelles PMU. J'ai travaillé sur le paramétrage et l'évaluation d'un détecteur multibande d'énergie RMS développé en Python (modes OFFLINE à phase nulle, REALTIME par blocs avec fenêtres rectangulaire ou de Kaiser, et comparaison BOTH), intégrant un critère de persistance temporelle et une calibration des seuils sur quatre bandes de fréquence : régulateurs de vitesse / modes très lents (0,01–0,15 Hz), modes inter-zones (0,15–1,0 Hz), modes locaux (1,0–5,0 Hz) et haute fréquence / torsion (> 5 Hz).",
+          "Afin de pallier les limites connues des détecteurs RMS classiques — forte dépendance aux données historiques et faux positifs en Bande 1 lors d'échelons ou de rampes — mes recherches se sont également appuyées sur des méthodes spectrales issues de la théorie de l'information (littérature IEEE récente), en particulier l'indice OPI (Oscillation Presence Index). Calculé à partir de la Densité Spectrale de Puissance (PSD de Welch) et de l'entropie de Shannon normalisée (planicité spectrale), l'OPI fournit une métrique standardisée entre 0 et 1 (seuils K1 = 0,35 et K2 = 0,65) robuste face aux transitoires non oscillatoires."
         ],
         diagrama: {
           mostrar: true,
-          tituloSvg: "Schéma fonctionnel de la chaîne d'analyse des synchrophaseurs",
-          descSvg: "Les mesures PMU du réseau MedFasee sont filtrées et analysées sous Python et MATLAB pour extraire les modes d'oscillation.",
+          tituloSvg: "Schéma fonctionnel de l'analyse QEE MedFasee et détection d'oscillations OpenWAMS",
+          descSvg: "Les mesures PMU du SIN alimentent l'évaluation QEE sous MedPlot et les moteurs de détection multibande OpenWAMS sous Python.",
           bloco1Titulo: "PMU / MedFasee",
-          bloco1Sub: "mesures synchronisées",
-          bloco2Titulo: "Prétraitement",
-          bloco2Sub: "filtrage des signaux",
-          blocoCentralTitulo: "Python / MATLAB",
-          blocoCentralSub: "analyse spectrale",
-          blocoSaidaTitulo: "Modes Réseau",
-          blocoSaidaSub: "fréquence / amortissement",
-          legenda: "Schéma interactif — survolez ou cliquez sur chaque bloc pour inspecter les étapes du traitement.",
-          dicaPadrao: "Survolez ou touchez un bloc ci-dessus pour inspecter son rôle dans l'analyse des synchrophaseurs.",
+          bloco1Sub: "60 phaseurs/s (SIN)",
+          bloco2Titulo: "QEE & MedPlot",
+          bloco2Sub: "critères de l'ONS",
+          blocoCentralTitulo: "OpenWAMS (Python)",
+          blocoCentralSub: "RMS & PSD / OPI",
+          blocoSaidaTitulo: "Modes et Rapports",
+          blocoSaidaSub: "0,01 à > 5 Hz",
+          legenda: "Schéma interactif — survolez ou cliquez sur chaque bloc pour inspecter le traitement des mesures PMU.",
+          dicaPadrao: "Survolez ou touchez un bloc ci-dessus pour inspecter chaque étape de la chaîne d'analyse.",
           detalhes: {
-            b1: "Acquisition PMU : Les unités de mesure de phaseurs synchronisés du réseau MedFasee enregistrent la tension et la fréquence avec synchronisation GPS.",
-            b2: "Conditionnement du Signal : Suppression des tendances et filtrage passe-bande (0,1 – 2,0 Hz) pour isoler les oscillations électromécaniques.",
-            bc: "Analyse Spectrale et Modale : Scripts Python et MATLAB dédiés à l'extraction des composantes fréquentielles lors de perturbations sur le réseau.",
-            bs: "Suivi de la Stabilité : Détermination des fréquences dominantes et des taux d'amortissement pour la surveillance dynamique du système électrique."
+            b1: "Acquisition Synchronisée : Les PMU du SIN enregistrent la fréquence, les tensions triphasées et les puissances active/réactive à 60 phaseurs/s, accessibles via le VPN de l'ONS.",
+            b2: "Qualité de l'Énergie (MedFasee) : Scripts de détection d'événements et graphiques MedPlot vérifiant la conformité des parcs éoliens aux seuils de l'ONS (ex. : 59,8–60,2 Hz pendant > 50 ms).",
+            bc: "Moteur OpenWAMS : Filtrage multibande et calcul d'énergie RMS sous Python (modes hors ligne et temps réel avec persistance), complétés par l'étude spectrale PSD de Welch et indice OPI.",
+            bs: "Diagnostic et Rapports : Identification des oscillations soutenues sur 4 bandes de fréquence et rédaction des rapports mensuels de conformité transmis à l'ONS."
           }
         },
         resultados: [
-          { metrica: "Bande de fréquence analysée", valor: "0,1 – 2,0 Hz", obs: "Modes d'oscillations électromécaniques" },
-          { metrica: "Source de données", valor: "PMU / MedFasee", obs: "Mesures synchronisées à grande échelle" },
-          { metrica: "Outils de traitement", valor: "Python & MATLAB", obs: "Scripts d'analyse automatisée" }
+          { metrica: "Résolution des mesures PMU", valor: "60 phaseurs/s", obs: "Fréquence, tensions triphasées, puissances active et réactive" },
+          { metrica: "Critère QEE de fréquence (ONS)", valor: "59,8 – 60,2 Hz (≤ 50 ms)", obs: "Vérifié via MedPlot et scripts mensuels d'événements" },
+          { metrica: "Détecteur multibande RMS", valor: "4 bandes (0,01 à > 5 Hz)", obs: "Fenêtres RMS : 120 s, 20 s, 2 s, 0,3 s ; modes Offline/Realtime" },
+          { metrica: "Base spectrale (indice OPI)", valor: "Indice normalisé 0 – 1", obs: "PSD de Welch et entropie spectrale (K1 = 0,35 ; K2 = 0,65)" }
         ],
         conclusao: [
-          "L'exploitation des mesures de synchrophaseurs du réseau MedFasee permet d'observer finement le comportement dynamique du système électrique brésilien (SIN).",
-          "L'intégration d'outils d'analyse sous Python et MATLAB assure une caractérisation fiable des modes d'oscillation basse fréquence et renforce le suivi de la stabilité dynamique des grands réseaux."
+          "Ma participation aux projets MedFasee et OpenWAMS au sein du LabPlan m'a permis d'acquérir une expérience rigoureuse sur des mesures réelles de synchrophaseurs issues du Système Interconnecté National brésilien (SIN) dans le cadre opérationnel de l'ONS.",
+          "L'alliance entre l'évaluation réglementaire de la qualité de l'énergie et la recherche de méthodes avancées de détection d'oscillations (énergie RMS multibande et approche PSD/OPI) illustre le rôle déterminant du traitement du signal pour la stabilité dynamique et la supervision en temps réel des grands réseaux électriques."
         ]
       },
       pt: {
-        titulo: "Análise de Oscilações MedFasee",
-        resumo: "Processamento de medições fasoriais sincronizadas do sistema MedFasee para identificar e caracterizar oscilações de baixa frequência na rede.",
-        altCapa: "Gráfico de oscilações em medições fasoriais do MedFasee",
-        tags: ["Python", "MATLAB", "Sincrofasores", "Processamento de sinais"],
-        funcao: "Pesquisador de Iniciação Científica (LabPlan - UFSC)",
-        periodo: "2025 – 2026",
-        ferramentas: "Python, MATLAB, MedPlot, dados de PMU",
-        contexto: "Pesquisa em Estabilidade de Sistemas de Potência (MedFasee / ONS)",
+        titulo: "Qualidade de Energia e Detecção de Oscilações via Sincrofasores (MedFasee & OpenWAMS)",
+        resumo: "Pesquisa de Iniciação Científica no LabPlan (UFSC) em parceria com o ONS, abrangendo a avaliação de Qualidade da Energia Elétrica (QEE) em PMUs no projeto MedFasee e a detecção multibanda de oscilações eletromecânicas no projeto OpenWAMS.",
+        altCapa: "Monitoramento fasorial de qualidade de energia e oscilações no Sistema Interligado Nacional",
+        tags: ["Python", "Sincrofasores", "PMU", "Qualidade de Energia", "Processamento de sinais"],
+        funcao: "Pesquisador de Iniciação Científica (LabPlan – UFSC)",
+        periodo: "Mar 2025 – Set 2026",
+        ferramentas: "Python, MedPlot, Dados de PMU (60 fasores/s), VPN ONS",
+        contexto: "Projetos MedFasee (QEE) e OpenWAMS — LabPlan / ONS",
         contextoTecnico: [
-          "As Unidades de Medição Fasorial Sincronizada (PMUs) fornecem dados de alta resolução temporal de tensão e frequência ao longo do Sistema Interligado Nacional (SIN).",
-          "Este projeto realiza o processamento de séries temporais de sincrofasores utilizando Python e MATLAB para detectar, filtrar e caracterizar oscilações eletromecânicas de baixa frequência e taxas de amortecimento em eventos reais da rede elétrica.",
-          "As análises apoiam o monitoramento fasorial de grandes áreas (WAMS) e a avaliação da estabilidade dinâmica do sistema elétrico de potência."
+          "Desenvolvida no Laboratório de Planejamento de Sistemas de Energia Elétrica (LabPlan – UFSC) em parceria com o Operador Nacional do Sistema Elétrico (ONS), esta pesquisa abrangeu duas frentes complementares em sistemas de monitoramento fasorial de grandes áreas (WAMS) a partir de medições reais de PMUs (Phasor Measurement Units).",
+          "### Fase 1 — Projeto MedFasee: Qualidade da Energia Elétrica (QEE)",
+          "No ingresso ao laboratório, atuei na frente de Qualidade da Energia Elétrica (QEE) do projeto MedFasee, voltada à avaliação mensal do desempenho de parques eólicos e barramentos monitorados por PMUs espalhadas pelo Sistema Interligado Nacional (SIN). A partir de dados acessados via VPN do ONS em resolução de 60 fasores por segundo e plotados no software MedPlot, avaliei como variáveis como frequência, tensão nas fases A, B e C, potência ativa e potência reativa se comportam diante de perturbações na rede.",
+          "Por meio de rotinas em Python para detecção automática de eventos mensais (alterações significativas de frequência, tensão ou potência), realizei a geração de planilhas de verificação e a análise dos eventos mais severos de cada PMU frente às normas e requisitos impostos pelo ONS — como o critério de que desvios de frequência fora da faixa de 59,8 Hz a 60,2 Hz não ultrapassem 50 ms (por exemplo, um evento de 54 ms analisado em março de 2025 com extremos de 59,72 Hz e 60,23 Hz, verificado em conformidade). Os resultados eram consolidados nos relatórios técnicos mensais entregues ao ONS.",
+          "### Fase 2 — Projeto OpenWAMS: Identificação de Oscilações no SIN",
+          "Na sequência, passei a atuar no projeto OpenWAMS, igualmente em conjunto com o ONS, focado na pesquisa e determinação de oscilações eletromecânicas em medições reais de sincrofasores. Trabalhei nos testes e na parametrização de um Detector Multibanda de Energia RMS em Python (operando em modo OFFLINE de fase zero, modo REALTIME em blocos com janelas retangular e de Kaiser, e modo comparativo BOTH), empregando temporizadores de persistência e calibração de limiares por tipo de sinal em quatro faixas de frequência: modos muito lentos / reguladores de velocidade (0,01–0,15 Hz), modos interárea (0,15–1,0 Hz), modos locais/intraplanta (1,0–5,0 Hz) e alta frequência / modos torsionais (> 5 Hz).",
+          "Em paralelo, a pesquisa fundamentou-se em abordagens espectrais recentes baseadas em Teoria da Informação (literatura IEEE), em especial o Oscillation Presence Index (OPI). Calculado a partir da Densidade Espectral de Potência (PSD via método de Welch) e da entropia espectral de Shannon (planicidade espectral), o índice OPI estabelece uma métrica padronizada de 0 a 1 (com limiares recomendados K1 = 0,35 e K2 = 0,65), reduzindo a dependência de histórico prévio e mitigando falsos alarmes na Banda 1 causados por degraus ou rampas no sinal."
         ],
         diagrama: {
           mostrar: true,
-          tituloSvg: "Diagrama de blocos do processamento de sincrofasores",
-          descSvg: "As medições PMU da rede MedFasee são filtradas e analisadas em Python e MATLAB para identificar modos de oscilação.",
-          bloco1Titulo: "PMU / MedFasee",
-          bloco1Sub: "medições sincronizadas",
-          bloco2Titulo: "Pré-processamento",
-          bloco2Sub: "filtragem de sinais",
-          blocoCentralTitulo: "Python / MATLAB",
-          blocoCentralSub: "análise espectral e modal",
-          blocoSaidaTitulo: "Modos da Rede",
-          blocoSaidaSub: "frequência e amortecimento",
-          legenda: "Diagrama interativo — passe o cursor ou toque em cada bloco para ver os detalhes do processamento.",
-          dicaPadrao: "Passe o cursor ou toque em qualquer bloco acima para inspecionar cada etapa da análise fasorial.",
+          tituloSvg: "Diagrama de blocos das atividades de QEE (MedFasee) e detecção de oscilações (OpenWAMS)",
+          descSvg: "As medições de PMUs do SIN alimentam as verificações de QEE no MedPlot e os detectores multibanda em Python do OpenWAMS.",
+          bloco1Titulo: "PMUs / MedFasee",
+          bloco1Sub: "60 fasores/s (SIN)",
+          bloco2Titulo: "QEE e MedPlot",
+          bloco2Sub: "critérios do ONS",
+          blocoCentralTitulo: "OpenWAMS (Python)",
+          blocoCentralSub: "RMS & PSD / OPI",
+          blocoSaidaTitulo: "Modos e Relatórios",
+          blocoSaidaSub: "0,01 a > 5 Hz",
+          legenda: "Diagrama interativo do fluxo de trabalho — passe o cursor ou toque em cada bloco para inspecionar as etapas da pesquisa.",
+          dicaPadrao: "Passe o cursor ou toque em qualquer bloco acima para inspecionar cada etapa das atividades no LabPlan.",
           detalhes: {
-            b1: "Aquisição Fasorial: PMUs instaladas no Sistema Interligado Nacional (projeto MedFasee) registram fasores de tensão e frequência sincronizados via GPS.",
-            b2: "Condicionamento de Sinais: Limpeza de séries temporais, remoção de tendência e filtragem passa-faixa (0,1 a 2,0 Hz) para isolar modos eletromecânicos.",
-            bc: "Processamento Python / MATLAB: Aplicação de métodos espectrais e modais para detectar oscilações de baixa frequência em eventos do sistema.",
-            bs: "Diagnóstico da Rede: Extração da frequência dominante e taxa de amortecimento para monitoramento da estabilidade dinâmica do SIN."
+            b1: "Aquisição Fasorial Sincronizada: PMUs instaladas no Sistema Interligado Nacional (SIN) registram frequência, tensões trifásicas e potências ativa/reativa a 60 fasores/s, com acesso via VPN do ONS.",
+            b2: "MedFasee (Qualidade de Energia): Identificação mensal de eventos via código e inspeção no MedPlot, verificando a conformidade de parques eólicos e barramentos frente aos parâmetros do ONS (ex.: 59,8–60,2 Hz por > 50 ms).",
+            bc: "Motor OpenWAMS em Python: Filtragem multibanda e energia RMS (modos offline e tempo real com critério de persistência), somadas à pesquisa de detecção espectral por PSD de Welch e índice OPI.",
+            bs: "Diagnóstico e Entregas: Caracterização de oscilações sustentadas nas 4 faixas de frequência (interárea, local e alta frequência) e elaboração de relatórios técnicos mensais ao ONS."
           }
         },
         resultados: [
-          { metrica: "Faixa de frequência analisada", valor: "0,1 – 2,0 Hz", obs: "Modos de oscilação eletromecânica" },
-          { metrica: "Fonte de dados", valor: "PMU / MedFasee", obs: "Medições fasoriais sincronizadas" },
-          { metrica: "Ferramentas de análise", valor: "Python e MATLAB", obs: "Scripts de processamento de sinais" }
+          { metrica: "Taxa de amostragem das PMUs", valor: "60 fasores/s", obs: "Frequência, tensões trifásicas, potências ativa e reativa" },
+          { metrica: "Critério de frequência QEE (ONS)", valor: "59,8 – 60,2 Hz (≤ 50 ms)", obs: "Verificado no MedPlot e consolidado em relatórios mensais" },
+          { metrica: "Detector Multibanda RMS", valor: "4 faixas (0,01 a > 5 Hz)", obs: "Janelas RMS: 120 s, 20 s, 2 s e 0,3 s (Offline / Tempo real)" },
+          { metrica: "Referência espectral (OPI)", valor: "Índice padronizado 0 – 1", obs: "PSD de Welch e entropia de Shannon (K1 = 0,35; K2 = 0,65)" }
         ],
         conclusao: [
-          "O processamento das medições fasoriais sincronizadas da rede MedFasee permite observar com alta precisão o comportamento dinâmico do Sistema Interligado Nacional (SIN) diante de perturbações.",
-          "A combinação de rotinas em Python e MATLAB viabiliza a identificação consistente dos modos de oscilação eletromecânica de baixa frequência e de seu amortecimento, apoiando o monitoramento da estabilidade de sistemas de potência."
+          "A atuação integrada nos projetos MedFasee e OpenWAMS no LabPlan proporcionou contato direto com medições fasoriais reais do Sistema Interligado Nacional (SIN) e com os requisitos normativos e operacionais do ONS.",
+          "A experiência na verificação de indicadores de Qualidade da Energia Elétrica consolidou a base prática em monitoramento por PMUs, enquanto a pesquisa e os testes de detecção multibanda de oscilações (energia RMS e abordagem espectral OPI) evidenciaram a importância do processamento de sinais para a supervisão dinâmica e a estabilidade dos sistemas de potência."
         ]
       }
     }
